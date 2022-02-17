@@ -17,22 +17,21 @@ module.exports = {
       sans: ['Maven Pro', 'sans-serif'],
       ...defaultTheme.fontFamily
     },
-    colors: {
-      'red': {
-        100: '#f8e4e4',
-        200: '#d9a2a2',
-        300: '#b54e4e',
-        400: '#811515',
-      },
-      ...defaultTheme.colors
-    },
     extend: {
       maxWidth: {
         logo: '35px'
       },
+      fontSize: {
+        '5xl': ['2.8rem', { lineHeight: '1' }]
+      },
       colors: {
-        bgWhite: '#fff',
-      }
+        'red': {
+          100: '#f8e4e4',
+          200: '#d9a2a2',
+          300: '#b54e4e',
+          400: '#811515',
+        },
+      },
     },
   },
   plugins: [],

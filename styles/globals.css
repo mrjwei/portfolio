@@ -5,19 +5,22 @@
 
 @layer base {
   h1 {
-    @apply text-7xl font-bold;
+    @apply text-5xl font-bold lg:text-6xl;
   }
   h2 {
-    @apply text-6xl font-bold;
+    @apply text-5xl font-bold lg:text-6xl;
   }
   h3 {
     @apply text-2xl font-bold;
   }
+  p, a {
+    @apply tracking-wider;
+  }
 }
 
 @layer components {
-  .bg-white {
-    background-color: theme('colors.bgWhite');
+  .container {
+    @apply px-3 lg:px-0;
   }
   .card {
     @apply p-8 rounded-lg bg-white max-w-sm mx-auto relative;
@@ -30,5 +33,8 @@
   }
   .card-img {
     @apply object-cover object-center;
+  }
+  .first-view-height {
+    height: calc(theme('height.screen') - theme('spacing.14'));
   }
 }
