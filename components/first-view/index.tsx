@@ -1,20 +1,16 @@
 export const FirstView = () => {
   return (
-    <div className="w-full">
-      <div className="container columns-1 lg:columns-2">
-        <h1>
-          <span className="block">Hi, I’m Jesse Wei.</span>
-          <span className="block">I Create Beautiful</span>
-          <span className="block">& User-Friendly</span>
-          <span className="block">Websites / Apps</span>
-          <span className="block">That Boost Your</span>
-          <span className="block">Business.</span>
+    <div className="w-full bg-red-300 lg:first-view-height pt-20">
+      <div className="container md:h-full md:grid md:grid-cols-2 md:grid-rows-1">
+        <h1 className="text-white mb-14 md:mb-0 md:mr-14 md:flex md:flex-col md:justify-center md:-translate-y-10">
+          Hi!<br />
+          I’m Jesse Wei.<br />
+          I Create Beautiful & User-Friendly Websites / Apps That Boost Your Business.
         </h1>
-        <div>
-          <img src="/images/global-images/first-view-illustration.svg" alt="first view illustration of Jesse Wei" />
+        <div className="flex justify-center md:h-full md:justify-end">
+          <img src="/images/global-images/first-view-illustration.svg" alt="first view illustration of Jesse Wei" className="max-w-full md:h-full lg:max-w-xl" />
         </div>
       </div>
     </div>
   )
 }
-
