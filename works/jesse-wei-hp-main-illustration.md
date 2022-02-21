@@ -1,8 +1,8 @@
 ---
-title: "Logo Concept: CougarFC"
-tags: ["#Logo", "#Design", "#Concept"]
+title: "Web Illustration: Jesse Wei HP"
+tags: ["#Illustration", "#Web"]
 description: "A logo designed for CougarFC, a conceptual PL team."
-image: "/images/work-images/cougar-thumbnail.png"
+image: "/images/post-images/counter.png"
 ---
 This is a logo designed for CougaraFC, a conceptual Premier League team.
 
