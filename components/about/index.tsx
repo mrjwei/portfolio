@@ -59,7 +59,7 @@ export const About = () => {
           <div>
             <p className='mb-8'>My name is Jesse Wei. I am a <span className='font-bold'>trilingual (Chinese, English and Japanese) designer and developer</span> currently based in Japan.</p>
             <p  className='mb-8'>Trained as a product designer, I learned coding 6 years ago. Being able to <span className='font-bold'>design AND develop</span> helps me understand a project better. It also allows me to see a potential solution from different perspectives so it not just looks appealing but is technically viable as well.</p>
-            <p>In addition to design and coding, I like <span className='font-bold'>illustrating</span> as well. At weekends, I usually <span className='font-bold'>practice latte art</span> or treat my friends to freshly brewed coffee at home. I also like football and I am a fan of <span className='font-bold'>LiverpoolFC</span> and the Premier League.</p>
+            <p>In addition to design and coding, I like <span className='font-bold'>illustrating</span> as well. On weekends, I usually <span className='font-bold'>practice latte art</span> or treat my friends to freshly brewed coffee at home. I also like football and I am a fan of <span className='font-bold'>LiverpoolFC</span> and the Premier League.</p>
           </div>
         </div>
       </div>
