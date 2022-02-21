@@ -28,7 +28,7 @@ export default ({item, moreItems}: Props) => {
           items={moreItems}
         />
       </div>
-      <Footer />
+      <Footer position='static' />
     </Layout>
   )
 }
