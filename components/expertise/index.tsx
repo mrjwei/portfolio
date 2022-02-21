@@ -1,4 +1,4 @@
-import {Title} from '../layout/title'
+import {Title} from '../sectionTitle'
 import {ExpertiseItem} from './expertise-item'
 
 export const Expertise = () => {
@@ -40,10 +40,11 @@ export const Expertise = () => {
       <div className="container">
         <Title
           label="My Expertise"
-          title="What I Do."
           reverse={false}
-          className="mb-16"
-        />
+          className="mb-20"
+        >
+          <span className='inline-block relative z-10 after:underbar'>What I Do.</span>
+        </Title>
         <div className="md:grid md:grid-cols-3 ">
           {expertiseItems.map(expertiseItem => {
             const {image, alt, title, items} = expertiseItem

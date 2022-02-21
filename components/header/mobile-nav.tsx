@@ -1,5 +1,4 @@
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faXmark} from '@fortawesome/free-solid-svg-icons'
+import { AiOutlineClose } from "react-icons/ai"
 import {MobileNavLink} from './mobile-nav-link'
 
 type Props = {
@@ -26,7 +25,7 @@ export const MobileNav = ({isOpen, onClose}: Props) => {
         })}
       </ul>
       <button className='text-red-200 text-2xl absolute top-3 right-8' onClick={onClose}>
-        <FontAwesomeIcon icon={faXmark} />
+        <AiOutlineClose />
       </button>
     </nav>
   )

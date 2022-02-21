@@ -1,13 +1,19 @@
 import Link from 'next/link'
 
-export const PCNav = () => {
+type Props = {
+  mode: string
+}
+
+export const PCNav = ({mode}: Props) => {
+  const linkColorClassName = mode === "primary" ? "text-white" : "text-red-300"
+
   return (
-    <nav className='hidden lg:block'>
-      <ul className='flex'>
-        <li><Link href="/"><a className="text-red-300 px-5">Top</a></Link></li>
-        <li><Link href="/works"><a className="text-red-300 px-5">Works</a></Link></li>
-        <li><Link href="/posts"><a className="text-red-300 px-5">Blog</a></Link></li>
-        <li><Link href="/contact"><a className="text-red-300 px-5">Contact</a></Link></li>
+    <nav className="hidden lg:block">
+      <ul className='flex items-center'>
+        <li><Link href="/"><a className={`px-6 ${linkColorClassName}`}>Top</a></Link></li>
+        <li><Link href="/works"><a className={`px-6 ${linkColorClassName}`}>Works</a></Link></li>
+        <li><Link href="/posts"><a className={`px-6 ${linkColorClassName}`}>Blog</a></Link></li>
+        <li><Link href="/contact"><a className={`button button-white border-2 p-1 px-6 ${linkColorClassName}`}>Contact</a></Link></li>
       </ul>
     </nav>
   )

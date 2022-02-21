@@ -2,6 +2,8 @@ import {FirstView} from '../first-view';
 import {Expertise} from '../expertise';
 import {Works} from '../works';
 import {Posts} from '../posts';
+import {About} from '../about';
+import {Contact} from '../contact';
 
 export const Main = ({worksData, postsData}: any) => {
   return (
@@ -14,6 +16,8 @@ export const Main = ({worksData, postsData}: any) => {
       <Posts
         postsData={postsData}
       />
+      <About />
+      <Contact />
     </main>
   )
 }

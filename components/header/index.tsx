@@ -1,7 +1,6 @@
-import {useEffect, useState, memo} from 'react'
+import {useEffect, useState} from 'react'
 import Link from 'next/link'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faBars} from '@fortawesome/free-solid-svg-icons'
+import {FaBars} from 'react-icons/fa';
 import {MobileNav} from './mobile-nav'
 import {PCNav} from './pc-nav'
 
@@ -10,7 +9,11 @@ type SizeType = {
   height: undefined | number
 }
 
-export const Header = memo(() => {
+type Props = {
+  mode: "primary" | "light"
+}
+
+export const Header = ({mode}: Props) => {
   const [isOpen, setIsOpen] = useState(false)
   const [windowSize, setWindowSize] = useState({
     width: undefined,
@@ -36,27 +39,27 @@ export const Header = memo(() => {
   }, [])
 
   return (
-    <header className="w-full py-3 leading-8 relative">
+    <header className="absolute w-full top-0 left-0 py-3 leading-8">
       <div className="container flex justify-between">
         <div className='flex flex-col justify-center'>
           <Link href="/">
             <a>
-              <img src="/images/global-images/logo-primary.svg" alt="logo of Jesse Wei" className='w-full max-w-logo' />
+              <img src={`${mode === "primary" ? "/images/global-images/logo-white.svg" : "/images/global-images/logo-primary.svg"}`} alt="Jesse Wei hp logo" className='w-full max-w-logo' />
             </a>
           </Link>
         </div>
         <button
-          className='text-2xl text-red-300 lg:hidden'
+          className={`text-2xl lg:hidden ${mode === "primary" ? "text-white" : "text-red-300"}`}
           onClick={() => setIsOpen(true)}
         >
-            <FontAwesomeIcon icon={faBars} />
+            <FaBars />
         </button>
         <MobileNav
           isOpen={isOpen}
           onClose={onClose}
         />
-        <PCNav />
+        <PCNav mode={mode} />
       </div>
     </header>
   )
-})
+}

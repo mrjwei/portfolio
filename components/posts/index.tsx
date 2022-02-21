@@ -1,36 +1,45 @@
 import Link from 'next/link'
+import {PostDataType} from '../../types'
+import {Title} from '../sectionTitle';
+import {Card} from '../card'
 
-export const Posts = ({postsData}: any) => {
+type Props = {
+  postsData: Array<PostDataType>
+}
+
+export const Posts = ({postsData}: Props) => {
   return (
-    <div className="w-full">
+    <div className="w-full bg-mute py-20 lg:py-0 lg:pt-36">
       <div className="container">
-        <div>
-          <span>My Posts</span>
-          <h2 className="text-6xl font-bold">
-            I Write About Design,<br />
-            Programming and<br />
-            Technologies.
-          </h2>
+        <div className='lg:flex lg:justify-between lg:items-end mb-20'>
+          <Title
+            label="My Posts"
+            reverse={false}
+            className="mb-20 lg:mb-0"
+          >
+            <span className="inline-block relative z-10 after:underbar">I Write About Design,</span><br/>
+            <span className='inline-block relative z-10 after:underbar'>Programming and</span><br/>
+            <span className='inline-block relative z-10 after:underbar'>Technologies.</span>
+          </Title>
+          <Link href="/posts">
+            <a className='text-red-300 flex items-center'>
+              <span className='mr-5'>More Posts</span>
+              <img className='w-24' src="/images/global-images/more.svg" alt="" />
+            </a>
+          </Link>
         </div>
-        <div className="w-full grid grid-cols-1 lg:grid-cols-3">
-          {postsData.slice(0, 2).map((post: any, index: number) => {
+        <ul className='relative lg:after:z-0 lg:after::content-[""] lg:after:block lg:after:w-screen lg:after:calc-h lg:after:bg-red-300 lg:after:absolute lg:after:calc-left lg:after:-bottom-20 lg:grid lg:grid-cols-3 lg:gap-8'>
+          {postsData.slice(0, 3).map((postData, index) => {
             return (
-              <div key={index} className={`${index === 1 ? 'card lg:right-20' : 'card'}`}>
-                <div className="card-body">
-                  <h3>{post.title}</h3>
-                  <ul className="tags">
-                    {post.tags.map((tag: any) => {
-                      return (
-                        <li key={tag} className="tag">{tag}</li>
-                      )
-                    })}
-                  </ul>
-                </div>
-              </div>
+              <li className="z-10 h-full transition-transform ease-in-out duration-500 hover:-translate-y-6 mb-12 last:mb-0 lg:mb-0">
+                <Card
+                  index={index}
+                  itemData={postData}
+                />
+              </li>
             )
           })}
-          <Link href="/posts">More Posts</Link>
-        </div>
+        </ul>
       </div>
     </div>
   )
