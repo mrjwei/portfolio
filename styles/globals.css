@@ -13,8 +13,14 @@
   h3 {
     @apply text-2xl font-bold;
   }
-  p, a {
+  h4 {
+    @apply text-xl font-bold;
+  }
+  a {
     @apply tracking-wider;
+  }
+  p {
+    @apply text-base;
   }
 }
 
@@ -22,11 +28,20 @@
   .container {
     @apply px-3 lg:px-0;
   }
+  .button {
+    @apply block w-full p-3 border-solid border-4 text-center transition ease-in-out;
+  }
+  .button-primary {
+    @apply border-red-300 text-red-300 hover:bg-red-300 hover:text-white;
+  }
+  .button-white {
+    @apply border-white text-white hover:bg-white hover:text-red-300;
+  }
   .card {
-    @apply p-8 rounded-lg bg-white max-w-sm mx-auto relative;
+    @apply w-full bg-white mx-auto relative;
   }
   .card-body {
-    @apply w-full h-20;
+    @apply w-full p-8;
   }
   .card-img-wrapper {
     @apply overflow-hidden;
@@ -34,7 +49,22 @@
   .card-img {
     @apply object-cover object-center;
   }
-  .first-view-height {
-    height: calc(theme('height.screen') - theme('spacing.14'));
+  .tags {
+    @apply flex;
+  }
+  .tag {
+    @apply mr-3;
+  }
+  .calc-left {
+    left: calc((theme("width.screen") - theme("width.full")) / 2 * -1)
+  }
+  .calc-h {
+    height: calc(50% + theme("spacing.20"));
+  }
+  .calc-pt {
+    padding-top: calc(16.75rem / 2 + 5rem - 50%);
+  }
+  .underbar {
+    @apply content-[""] block w-full h-4 bg-red-150 absolute left-0 bottom-0 -z-10 lg:h-5;
   }
 }

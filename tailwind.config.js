@@ -21,18 +21,25 @@ module.exports = {
       maxWidth: {
         logo: '35px'
       },
+      minHeight: {
+        card: "200px"
+      },
       fontSize: {
         '5xl': ['2.8rem', { lineHeight: '1' }]
       },
       colors: {
         'red': {
           100: '#f8e4e4',
+          150: '#f7cdcd',
           200: '#d9a2a2',
           300: '#b54e4e',
           400: '#811515',
         },
+        'mute': '#F7F5F5',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
