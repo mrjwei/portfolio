@@ -29,8 +29,3 @@ export interface FilterButtonInterface {
   isActive: boolean
   handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
-
-export interface FilterButtonsInterface {
-  filters: FilterButtonInterface[]
-  activeFilterValue: string
-}

@@ -8,7 +8,7 @@ import {Layout} from '../../components/layout'
 import {Header} from '../../components/header'
 import {Main} from '../../components/main'
 import {Card} from '../../components/card'
-import {FilterButtons} from '../../components/filterButtons'
+import {FilterButton} from '../../components/filterButton'
 import {Pagination} from '../../components/pagination'
 import {Footer} from '../../components/footer'
 
@@ -17,10 +17,10 @@ type Props = {
 }
 
 const FILTERVALUES = {
-  ALL: "all",
-  APPS: "app",
-  LOGOS: "logo",
-  ILLUSTRATIONS: "illustration",
+  ALL: "#all",
+  APPS: "#app",
+  LOGOS: "#logo",
+  ILLUSTRATIONS: "#illustration",
 }
 
 const ITEMPERPAGE = 6
@@ -31,7 +31,7 @@ export default ({worksData}: Props) => {
   const [numOfPages, setNumOfPages] = useState(initialNumOfPages)
 
   useEffect(() => {
-    const numOfWorks = filterValue === "all" ? worksData.length : worksData.filter(workData => workData.tags.includes(filterValue)).length
+    const numOfWorks = filterValue === "#all" ? worksData.length : worksData.filter(workData => workData.tags.includes(filterValue)).length
 
     const newNumOfPages = getNumOfPages(numOfWorks, ITEMPERPAGE)
 
@@ -48,26 +48,18 @@ export default ({worksData}: Props) => {
     {
       label: "All",
       value: FILTERVALUES.ALL,
-      isActive: filterValue === FILTERVALUES.ALL,
-      handleClick
     },
     {
       label: "App",
       value: FILTERVALUES.APPS,
-      isActive: filterValue === FILTERVALUES.APPS,
-      handleClick
     },
     {
       label: "Logo",
       value: FILTERVALUES.LOGOS,
-      isActive: filterValue === FILTERVALUES.LOGOS,
-      handleClick
     },
     {
       label: "Illustration",
       value: FILTERVALUES.ILLUSTRATIONS,
-      isActive: filterValue === FILTERVALUES.ILLUSTRATIONS,
-      handleClick
     }
   ]
 
@@ -82,11 +74,18 @@ export default ({worksData}: Props) => {
       <Main className='bg-mute py-36'>
         <div className='container'>
           <h2 className='mb-8'>Works.</h2>
-          <FilterButtons
-            filters={filters}
-            activeFilterValue={filterValue}
-          />
-          {filterValue === "all" ? (
+          {filters.map((filter, index) => {
+            const {label, value} = filter
+            return (
+              <FilterButton
+                label={label}
+                value={value}
+                isActive={value === filterValue}
+                handleClick={handleClick}
+              />
+            )
+          })}
+          {filterValue === "#all" ? (
             <div className='mt-16 lg:grid lg:grid-cols-3 lg:justify-items-stretch lg:gap-x-24 lg:gap-y-20'>
               {worksData.map((workData, index) => {
                 return (
