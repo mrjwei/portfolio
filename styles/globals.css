@@ -41,10 +41,10 @@
     @apply border-white text-white hover:bg-white hover:text-red-300;
   }
   .button-bg-white {
-    @apply border-none bg-white text-red-300 hover:bg-red-300 hover:text-white;
+    @apply button-white border-none bg-white text-red-300 hover:bg-red-300 hover:text-white;
   }
   .button-bg-white-reverse {
-    @apply bg-red-300 text-white;
+    @apply button-bg-white bg-red-300 text-white;
   }
   .card {
     @apply w-full bg-white mx-auto relative;
