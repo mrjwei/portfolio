@@ -1,7 +1,7 @@
 ---
 title: "An Introduction to CSS Counter"
 date: "2020-09-30"
-tags: ["#Web", "#CSS", "#Counter"]
+tags: ["#web", "#css", "#tutorial"]
 description: "CSS counter generates automatically incrementing numbers for a group of HTML elements."
 ---
 CSS counter generates **automatically incrementing numbers** for a group of HTML elements. This comes in handy when you have a list of recommended books, for example, and you want to add a number to each of them based on their order in the list(like 1, 2, 3...).

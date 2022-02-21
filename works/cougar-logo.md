@@ -1,6 +1,6 @@
 ---
 title: "Logo Concept: CougarFC"
-tags: ["#Logo", "#Design", "#Concept"]
+tags: ["#logo", "#design", "#concept"]
 description: "A logo designed for CougarFC, a conceptual PL team."
 image: "/images/work-images/cougar-thumbnail.png"
 ---

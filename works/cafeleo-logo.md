@@ -1,6 +1,6 @@
 ---
 title: "Concept Logo: Cafe Leo"
-tags: ["#Logo", "#Design", "#Concept"]
+tags: ["#logo", "#design", "#concept"]
 description: "A logo designed for Cafe Leo, a conceptual vintage cafe."
 image: "/images/work-images/cafeleo-thumbnail.png"
 ---
