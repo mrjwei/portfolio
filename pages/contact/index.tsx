@@ -2,7 +2,8 @@ import Head from 'next/head'
 import {Layout} from '../../components/layout'
 import {Header} from '../../components/header'
 import {Main} from '../../components/main'
-import {Form} from '../../components/form';
+import {Form} from '../../components/form'
+import {Footer} from '../../components/footer'
 
 export default () => {
   return (
@@ -30,6 +31,7 @@ export default () => {
           />
         </div>
       </Main>
+      <Footer position="static" />
     </Layout>
   )
 }

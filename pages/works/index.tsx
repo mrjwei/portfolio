@@ -10,6 +10,7 @@ import {Main} from '../../components/main'
 import {Card} from '../../components/card'
 import {FilterButtons} from '../../components/filterButtons'
 import {Pagination} from '../../components/pagination'
+import {Footer} from '../../components/footer'
 
 type Props = {
   worksData: WorkDataType[]
@@ -115,6 +116,7 @@ export default ({worksData}: Props) => {
           <Pagination numOfPages={numOfPages} />
         </div>
       </Main>
+      <Footer position="static" />
     </Layout>
   )
 }

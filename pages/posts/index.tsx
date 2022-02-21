@@ -1,5 +1,7 @@
+import {Footer} from '../../components/footer'
+
 export default () => {
   return (
-    <div>All Posts</div>
+    <Footer position="static" />
   )
 }
