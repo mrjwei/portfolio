@@ -34,6 +34,9 @@
   .button-primary {
     @apply border-red-300 text-red-300 hover:bg-red-300 hover:text-white;
   }
+  .button-bg-primary {
+    @apply button-primary bg-red-300 text-white hover:bg-transparent hover:text-red-300;
+  }
   .button-white {
     @apply border-white text-white hover:bg-white hover:text-red-300;
   }

@@ -45,7 +45,7 @@ export const Form = ({mode, withBorder, action}: FormProps) => {
         <label htmlFor="message" className={`block mb-3 ${mode === "primary" && "text-white"}`}>Message</label>
         <textarea name="message" id="message" rows={5} maxLength={500} className={`block w-full rounded-md ${withBorder ? "border-2" : "border-none"} `}value={message} onChange={e => setMessage(e.target.value)}></textarea>
       </div>
-      <button type="submit" className="button button-white">Submit</button>
+      <button type="submit" className={`button ${mode === "primary" ? "button-white" : "button-bg-primary"}`}>Submit</button>
     </form>
   )
 }
