@@ -1,5 +1,5 @@
 ---
-title: "An Introduction to CSS Counter"
+title: "Example"
 date: "2020-09-30"
 tags: ["#Web", "#CSS", "#Counter"]
 description: "CSS counter generates automatically incrementing numbers for a group of HTML elements."
