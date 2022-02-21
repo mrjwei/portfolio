@@ -3,18 +3,20 @@ import {WorkDataType, PostDataType} from '../../types'
 import {Tags} from '../tags'
 
 type Props = {
-  index: number
+  index: number | string
   itemData: WorkDataType | PostDataType
+  wrapperClassName?: string
+  cardClassName?: string
 }
 
-export const Card = ({index, itemData}: Props) => {
+export const Card = ({index, itemData, wrapperClassName, cardClassName}: Props) => {
   const {id, title, tags, description, ...props} = itemData
 
   if ("image" in props) {
     return (
       <Link href={`/works/${id}`}>
-        <a className='w-80 drop-shadow-2xl'>
-          <div key={index} className="card">
+        <a className={`drop-shadow-2xl ${wrapperClassName}`}>
+          <div key={index} className={`card ${cardClassName}`}>
             <div className="card-img-wrapper">
               <img src={props.image} alt={description} className="card-img" />
             </div>

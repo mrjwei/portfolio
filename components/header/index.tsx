@@ -20,7 +20,7 @@ export const Header = ({mode}: Props) => {
     height: undefined
   } as SizeType)
 
-  const onClose = () => {
+  const handleClose = () => {
     setIsOpen(false)
   }
 
@@ -39,7 +39,7 @@ export const Header = ({mode}: Props) => {
   }, [])
 
   return (
-    <header className="absolute w-full top-0 left-0 py-3 leading-8">
+    <header className={`absolute w-full top-0 left-0 py-3 leading-8 ${mode === "light" && "bg-white"}`}>
       <div className="container flex justify-between">
         <div className='flex flex-col justify-center'>
           <Link href="/">
@@ -56,7 +56,7 @@ export const Header = ({mode}: Props) => {
         </button>
         <MobileNav
           isOpen={isOpen}
-          onClose={onClose}
+          handleClose={handleClose}
         />
         <PCNav mode={mode} />
       </div>

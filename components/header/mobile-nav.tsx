@@ -3,10 +3,10 @@ import {MobileNavLink} from './mobile-nav-link'
 
 type Props = {
   isOpen: boolean
-  onClose: () => void
+  handleClose: () => void
 }
 
-export const MobileNav = ({isOpen, onClose}: Props) => {
+export const MobileNav = ({isOpen, handleClose}: Props) => {
   return (
     <nav className={`z-10 w-full bg-white absolute top-0 left-0 h-screen lg:hidden transition transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
       <ul className='mt-14'>
@@ -24,7 +24,7 @@ export const MobileNav = ({isOpen, onClose}: Props) => {
           )
         })}
       </ul>
-      <button className='text-red-200 text-2xl absolute top-3 right-8' onClick={onClose}>
+      <button className='text-red-200 text-2xl absolute top-3 right-8' onClick={handleClose}>
         <AiOutlineClose />
       </button>
     </nav>

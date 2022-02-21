@@ -1,3 +1,5 @@
+import React from "react"
+
 export interface DataType {
   id: string
   title: string
@@ -19,4 +21,16 @@ export interface Post extends PostDataType {
 
 export interface Work extends WorkDataType {
   content: string
+}
+
+export interface FilterButtonInterface {
+  label: string
+  value: string
+  isActive: boolean
+  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void
+}
+
+export interface FilterButtonsInterface {
+  filters: FilterButtonInterface[]
+  activeFilterValue: string
 }

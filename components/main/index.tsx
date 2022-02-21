@@ -1,23 +1,12 @@
-import {FirstView} from '../first-view';
-import {Expertise} from '../expertise';
-import {Works} from '../works';
-import {Posts} from '../posts';
-import {About} from '../about';
-import {Contact} from '../contact';
+type Props = {
+  className?: string
+  children: React.ReactNode
+}
 
-export const Main = ({worksData, postsData}: any) => {
+export const Main = ({className, children}: Props) => {
   return (
-    <main className="w-full">
-      <FirstView />
-      <Expertise />
-      <Works
-        worksData={worksData}
-      />
-      <Posts
-        postsData={postsData}
-      />
-      <About />
-      <Contact />
+    <main className={className}>
+      {children}
     </main>
   )
 }

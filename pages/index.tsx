@@ -4,6 +4,12 @@ import {getWorksData} from '../lib/works'
 import {getPostsData} from '../lib/posts'
 import {Layout} from '../components/layout'
 import {Header} from '../components/header'
+import {FirstView} from '../components/first-view';
+import {Expertise} from '../components/expertise';
+import {Works} from '../components/works';
+import {Posts} from '../components/posts';
+import {About} from '../components/about';
+import {Contact} from '../components/contact';
 import {Main} from '../components/main'
 import {Footer} from '../components/footer'
 
@@ -16,10 +22,18 @@ export default ({worksData, postsData}: any) => {
         <link rel="icon" href="/images/global-images/favicon.png" />
       </Head>
       <Header mode="primary" />
-      <Main
-        worksData={worksData}
-        postsData={postsData}
-      />
+      <Main>
+        <FirstView />
+        <Expertise />
+        <Works
+          worksData={worksData}
+        />
+        <Posts
+          postsData={postsData}
+        />
+        <About />
+        <Contact />
+      </Main>
       <Footer position='absolute' />
     </Layout>
   )

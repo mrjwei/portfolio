@@ -29,13 +29,19 @@
     @apply px-3 lg:px-0;
   }
   .button {
-    @apply block w-full p-3 border-solid border-4 text-center transition ease-in-out;
+    @apply block w-full p-3 border-solid border-4 text-center rounded-md transition ease-in-out;
   }
   .button-primary {
     @apply border-red-300 text-red-300 hover:bg-red-300 hover:text-white;
   }
   .button-white {
     @apply border-white text-white hover:bg-white hover:text-red-300;
+  }
+  .button-bg-white {
+    @apply border-none bg-white text-red-300 hover:bg-red-300 hover:text-white;
+  }
+  .button-bg-white-reverse {
+    @apply bg-red-300 text-white;
   }
   .card {
     @apply w-full bg-white mx-auto relative;

@@ -1,8 +1,13 @@
 import React from "react"
 
-export const Layout = ({children}: {children: React.ReactNode}) => {
+type Props = {
+  className?: string
+  children: React.ReactNode
+}
+
+export const Layout = ({className, children}: Props) => {
   return (
-    <div className="w-full relative">
+    <div className={`w-full relative ${className}`}>
       {children}
     </div>
   )
