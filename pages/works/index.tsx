@@ -33,7 +33,7 @@ export default ({worksData}: Props) => {
 
   const [filterValue, setFilterValue] = useState(FILTERVALUES.ALL)
   const [numOfPages, setNumOfPages] = useState(initialNumOfPages)
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState(router.query.page ? Number(router.query.page) : 1)
 
   useEffect(() => {
     const numOfWorks = filterValue === "#all" ? worksData.length : worksData.filter(workData => workData.tags.includes(filterValue)).length
@@ -52,17 +52,17 @@ export default ({worksData}: Props) => {
   const handleMovePrev = () => {
     if (currentPage === 1) {
       setCurrentPage(1)
-      router.push("/?page=1", undefined, {shallow: true})
+      router.push("/works/?page=1", undefined, {shallow: true})
     } else {
       setCurrentPage(currentPage - 1)
-      router.push(`/?page=${currentPage - 1}`, undefined, {shallow: true})
+      router.push(`/works/?page=${currentPage - 1}`, undefined, {shallow: true})
     }
   }
 
   const handleMoveNext = () => {
     if (currentPage === numOfPages) {
       setCurrentPage(numOfPages)
-      router.push(`/?page=${numOfPages}`, undefined, {shallow: true})
+      router.push(`/works/?page=${numOfPages}`, undefined, {shallow: true})
     } else {
       setCurrentPage(currentPage + 1)
       router.push(`/works/?page=${currentPage + 1}`, undefined, {shallow: true})
@@ -72,24 +72,24 @@ export default ({worksData}: Props) => {
   const handleMoveToPage = (event: React.MouseEvent<HTMLButtonElement>) => {
     const target = event.target as HTMLButtonElement
     setCurrentPage(parseInt(target.value))
-    router.push(`/?page=${target.value}`, undefined, {shallow: true})
+    router.push(`/works/?page=${target.value}`, undefined, {shallow: true})
   }
 
   const filters = [
     {
-      label: "All",
+      label: "all",
       value: FILTERVALUES.ALL,
     },
     {
-      label: "App",
+      label: "app",
       value: FILTERVALUES.APPS,
     },
     {
-      label: "Logo",
+      label: "logo",
       value: FILTERVALUES.LOGOS,
     },
     {
-      label: "Illustration",
+      label: "illustration",
       value: FILTERVALUES.ILLUSTRATIONS,
     }
   ]
