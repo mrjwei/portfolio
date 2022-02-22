@@ -10,6 +10,7 @@ type PaginationProps = {
 
 type PageNumsProps = {
   numOfPages: number
+  currentPage: number
   handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
@@ -21,11 +22,12 @@ export const Pagination = ({
   handleMoveToPage
 }: PaginationProps) => {
 
-  const PageNums = ({numOfPages, handleClick}: PageNumsProps) => {
+  const PageNums = ({numOfPages, currentPage, handleClick}: PageNumsProps) => {
     const NumComponents = []
     for (let i = 0; i < numOfPages; i++) {
       NumComponents.push(
         <button
+          className={`mx-3 ${currentPage === i + 1 ? "text-red-300 font-bold" : "text-red-200"}`}
           key={i}
           value={i + 1}
           onClick={handleClick}
@@ -49,6 +51,7 @@ export const Pagination = ({
       </button>
       <PageNums
         numOfPages={numOfPages}
+        currentPage={currentPage}
         handleClick={handleMoveToPage}
       />
       <button
