@@ -13,7 +13,7 @@ export const MobileNav = ({isOpen, handleClose}: Props) => {
         {[
           {href: "/", label: "Top"},
           {href: "/works", label: "Works"},
-          {href: "/posts", label: "Blog"},
+          {href: "/posts", label: "Posts"},
           {href: "/contact", label: "Contact"},
         ].map(item => {
           const {href, label} = item
