@@ -1,7 +1,7 @@
 ---
 title: "React: Be Careful of Return Syntax"
 date: "2020-12-12"
-tags: ["#frontend", "#react", "#tips"]
+tags: ["#frontend", "#tips&tricks"]
 description: "React complains 'SomeComponent cannot be used as a JSX component' and your code looks perfect. If this happened to you, check the return expressions of your components."
 ---
 React complains **"'SomeComponent' cannot be used as a JSX component"** and your code looks perfect. If this happened to you, check the **return expressions** of your components.
