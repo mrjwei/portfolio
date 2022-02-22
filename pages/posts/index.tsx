@@ -114,20 +114,22 @@ export default ({postsData}: Props) => {
       <Header mode="light" />
       <Main className='bg-mute py-36'>
         <div className='container'>
-          <h2 className='mb-8'>Works.</h2>
-          {filters.map((filter, index) => {
-            const {label, value} = filter
-            return (
-              <FilterButton
-                label={label}
-                value={value}
-                isActive={value === filterValue}
-                handleClick={handleClick}
-              />
-            )
-          })}
+          <h2 className='mb-8'>Posts.</h2>
+          <div className='flex justify-start'>
+            {filters.map((filter, index) => {
+              const {label, value} = filter
+              return (
+                <FilterButton
+                  label={label}
+                  value={value}
+                  isActive={value === filterValue}
+                  handleClick={handleClick}
+                />
+              )
+            })}
+          </div>
           {filterValue === "#all" ? (
-            <div className='mt-16 lg:grid lg:grid-cols-3 lg:justify-items-stretch lg:gap-x-24 lg:gap-y-20'>
+            <div className='my-24 lg:grid lg:grid-cols-3 lg:justify-items-stretch lg:gap-x-24 lg:gap-y-20'>
               {postsData.slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((workData, index) => {
                 return (
                   <Card
@@ -140,7 +142,7 @@ export default ({postsData}: Props) => {
               })}
             </div>
           ) : (
-            <div className='mt-16 lg:grid lg:grid-cols-3 lg:justify-items-stretch lg:gap-x-24 lg:gap-y-20'>
+            <div className='my-24 lg:grid lg:grid-cols-3 lg:justify-items-stretch lg:gap-x-24 lg:gap-y-20'>
               {postsData.filter(workData => workData.tags.includes(filterValue)).slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((workData, index) => {
                 return (
                   <Card
