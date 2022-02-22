@@ -36,6 +36,8 @@ export const Works = ({worksData}: Props) => {
                 <Card
                   index={index}
                   itemData={workData}
+                  wrapperClassName="w-full lg:w-auto"
+                  cardClassName='w-full max-w-md lg:w-80'
                 />
               </li>
             )
