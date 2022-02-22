@@ -1,5 +1,6 @@
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import Head from 'next/head'
+import {useRouter} from 'next/router'
 import {GetStaticProps} from 'next'
 import {WorkDataType} from '../../types';
 import {getWorksData} from '../../lib/works'
@@ -23,12 +24,16 @@ const FILTERVALUES = {
   ILLUSTRATIONS: "#illustration",
 }
 
-const ITEMPERPAGE = 6
+const ITEMPERPAGE = 2
 
 export default ({worksData}: Props) => {
+  const router = useRouter()
+
   const initialNumOfPages = getNumOfPages(worksData.length, ITEMPERPAGE)
+
   const [filterValue, setFilterValue] = useState(FILTERVALUES.ALL)
   const [numOfPages, setNumOfPages] = useState(initialNumOfPages)
+  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
     const numOfWorks = filterValue === "#all" ? worksData.length : worksData.filter(workData => workData.tags.includes(filterValue)).length
@@ -42,6 +47,32 @@ export default ({worksData}: Props) => {
     const target = event.target as HTMLButtonElement
     const value = target.value
     setFilterValue(value)
+  }
+
+  const handleMovePrev = () => {
+    if (currentPage === 1) {
+      setCurrentPage(1)
+      router.push("/?page=1", undefined, {shallow: true})
+    } else {
+      setCurrentPage(currentPage - 1)
+      router.push(`/?page=${currentPage - 1}`, undefined, {shallow: true})
+    }
+  }
+
+  const handleMoveNext = () => {
+    if (currentPage === numOfPages) {
+      setCurrentPage(numOfPages)
+      router.push(`/?page=${numOfPages}`, undefined, {shallow: true})
+    } else {
+      setCurrentPage(currentPage + 1)
+      router.push(`/works/?page=${currentPage + 1}`, undefined, {shallow: true})
+    }
+  }
+
+  const handleMoveToPage = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const target = event.target as HTMLButtonElement
+    setCurrentPage(parseInt(target.value))
+    router.push(`/?page=${target.value}`, undefined, {shallow: true})
   }
 
   const filters = [
@@ -87,7 +118,7 @@ export default ({worksData}: Props) => {
           })}
           {filterValue === "#all" ? (
             <div className='mt-16 lg:grid lg:grid-cols-3 lg:justify-items-stretch lg:gap-x-24 lg:gap-y-20'>
-              {worksData.map((workData, index) => {
+              {worksData.slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((workData, index) => {
                 return (
                   <Card
                     index={index}
@@ -100,7 +131,7 @@ export default ({worksData}: Props) => {
             </div>
           ) : (
             <div className='mt-16 lg:grid lg:grid-cols-3 lg:justify-items-stretch lg:gap-x-24 lg:gap-y-20'>
-              {worksData.filter(workData => workData.tags.includes(filterValue)).map((workData, index) => {
+              {worksData.filter(workData => workData.tags.includes(filterValue)).slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((workData, index) => {
                 return (
                   <Card
                     index={index}
@@ -112,7 +143,13 @@ export default ({worksData}: Props) => {
               })}
             </div>
           )}
-          <Pagination numOfPages={numOfPages} />
+          <Pagination
+            numOfPages={numOfPages}
+            currentPage={currentPage}
+            handleMovePrev={handleMovePrev}
+            handleMoveNext={handleMoveNext}
+            handleMoveToPage={handleMoveToPage}
+          />
         </div>
       </Main>
       <Footer position="static" />
