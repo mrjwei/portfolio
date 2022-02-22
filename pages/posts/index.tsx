@@ -28,7 +28,7 @@ const FILTERVALUES = {
 
 const ITEMPERPAGE = 2
 
-export default ({postsData}: Props) => {
+const Posts =  ({postsData}: Props) => {
   const router = useRouter()
 
   const initialNumOfPages = getNumOfPages(postsData.length, ITEMPERPAGE)
@@ -120,6 +120,7 @@ export default ({postsData}: Props) => {
               const {label, value} = filter
               return (
                 <FilterButton
+                  key={index}
                   label={label}
                   value={value}
                   isActive={value === filterValue}
@@ -133,7 +134,7 @@ export default ({postsData}: Props) => {
               {postsData.slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((workData, index) => {
                 return (
                   <Card
-                    index={index}
+                    key={index}
                     itemData={workData}
                     wrapperClassName="w-full"
                     cardClassName="h-full"
@@ -146,7 +147,7 @@ export default ({postsData}: Props) => {
               {postsData.filter(workData => workData.tags.includes(filterValue)).slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((workData, index) => {
                 return (
                   <Card
-                    index={index}
+                    key={index}
                     itemData={workData}
                     wrapperClassName="w-full"
                     cardClassName="h-full"
@@ -168,6 +169,8 @@ export default ({postsData}: Props) => {
     </Layout>
   )
 }
+
+export default Posts
 
 export const getStaticProps: GetStaticProps = async () => {
   const postsData = getPostsData()

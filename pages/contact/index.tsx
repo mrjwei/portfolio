@@ -5,7 +5,7 @@ import {Main} from '../../components/main'
 import {Form} from '../../components/form'
 import {Footer} from '../../components/footer'
 
-export default () => {
+const Contact =  () => {
   return (
     <Layout>
       <Head>
@@ -35,3 +35,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default Contact

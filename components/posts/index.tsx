@@ -33,7 +33,7 @@ export const Posts = ({postsData}: Props) => {
             return (
               <li className="z-10 h-full transition-transform ease-in-out duration-500 hover:-translate-y-6 mb-12 last:mb-0 lg:mb-0">
                 <Card
-                  index={index}
+                  key={index}
                   itemData={postData}
                 />
               </li>

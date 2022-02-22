@@ -13,7 +13,7 @@ import {Contact} from '../components/contact';
 import {Main} from '../components/main'
 import {Footer} from '../components/footer'
 
-export default ({worksData, postsData}: any) => {
+const Home = ({worksData, postsData}: any) => {
   return (
     <Layout>
       <Head>
@@ -38,6 +38,8 @@ export default ({worksData, postsData}: any) => {
     </Layout>
   )
 }
+
+export default Home
 
 export const getStaticProps: GetStaticProps = async () => {
   const worksData = getWorksData()

@@ -12,8 +12,8 @@ export const ExpertiseItem = ({image, alt, title, items}: Props) => {
       <div>
         <h3 className="mb-3">{title}</h3>
         <ul>
-          {items.map(item => (
-            <li className="mb-1 last:mb-0">{item}</li>
+          {items.map((item, index) => (
+            <li key={index} className="mb-1 last:mb-0">{item}</li>
           ))}
         </ul>
       </div>

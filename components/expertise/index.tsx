@@ -46,10 +46,11 @@ export const Expertise = () => {
           <span className='inline-block relative z-10 after:underbar'>What I Do.</span>
         </Title>
         <div className="md:grid md:grid-cols-3 ">
-          {expertiseItems.map(expertiseItem => {
+          {expertiseItems.map((expertiseItem, index) => {
             const {image, alt, title, items} = expertiseItem
             return (
               <ExpertiseItem
+                key={index}
                 image={image}
                 alt={alt}
                 title={title}

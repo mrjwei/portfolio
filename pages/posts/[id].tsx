@@ -11,7 +11,7 @@ type Props = {
   moreItems: Array<PostDataType>
 }
 
-export default ({item, moreItems}: Props) => {
+const Post =  ({item, moreItems}: Props) => {
   const {title} = item
   return (
     <Layout>
@@ -30,6 +30,8 @@ export default ({item, moreItems}: Props) => {
     </Layout>
   )
 }
+
+export default Post
 
 export const getStaticPaths = async () => {
   const paths = getPostIds()

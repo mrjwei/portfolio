@@ -34,7 +34,7 @@ export const Works = ({worksData}: Props) => {
             return (
               <li className='flex justify-start relative last:mt-12 lg:last:mt-16 lg:justify-center lg:last:-left-16'>
                 <Card
-                  index={index}
+                  key={index}
                   itemData={workData}
                   wrapperClassName="w-full lg:w-auto"
                   cardClassName='w-full max-w-md lg:w-80'

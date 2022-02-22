@@ -15,10 +15,10 @@ export const MobileNav = ({isOpen, handleClose}: Props) => {
           {href: "/works", label: "Works"},
           {href: "/posts", label: "Posts"},
           {href: "/contact", label: "Contact"},
-        ].map(item => {
+        ].map((item, index) => {
           const {href, label} = item
           return (
-            <li key={href}>
+            <li key={index}>
               <MobileNavLink path={href}>{label}</MobileNavLink>
             </li>
           )
