@@ -35,7 +35,7 @@ export const Form = ({mode, withBorder, action}: FormProps) => {
       <div className="mb-6">
         <label htmlFor="subject" className={`block mb-3 ${mode === "primary" && "text-white"}`}>Subject</label>
         <select name="subject" id="subject" className={`block w-full rounded-md ${withBorder ? "border-2" : "border-none"} `} value={subject} onChange={e => setSubject(e.target.value)}>
-          <option value="" selected disabled>Choose a subject</option>
+          <option selected disabled>Choose a subject</option>
           <option value="hiring">Interested in hiring Jesse</option>
           <option value="question">Got a question about a work/post</option>
           <option value="other">Other</option>

@@ -31,9 +31,8 @@ export const Posts = ({postsData}: Props) => {
         <ul className='relative lg:after:z-0 lg:after::content-[""] lg:after:block lg:after:w-screen lg:after:calc-h lg:after:bg-red-300 lg:after:absolute lg:after:calc-left lg:after:-bottom-20 lg:grid lg:grid-cols-3 lg:gap-8'>
           {postsData.slice(0, 3).map((postData, index) => {
             return (
-              <li className="z-10 h-full transition-transform ease-in-out duration-500 hover:-translate-y-6 mb-12 last:mb-0 lg:mb-0">
+              <li key={index} className="z-10 h-full transition-transform ease-in-out duration-500 hover:-translate-y-6 mb-12 last:mb-0 lg:mb-0">
                 <Card
-                  key={index}
                   itemData={postData}
                 />
               </li>

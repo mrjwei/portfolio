@@ -19,8 +19,8 @@ const Contact =  () => {
           <div>
             <h2 className='mb-8'>Contact.</h2>
             <p className='text-xl mb-14 lg:mb-0'>
-              Whether you're interested in hiring me<br/>
-              or you've got a question to ask,<br/>
+              Whether you&apos;re interested in hiring me<br/>
+              or you&apos;ve got a question to ask,<br/>
               feel free to get in touch!
             </p>
           </div>

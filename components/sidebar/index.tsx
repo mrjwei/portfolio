@@ -14,7 +14,7 @@ export const Sidebar = ({items}: Props) => {
     //       const {itemData} = item
     //       return (
     //         <Card
-    //           index={index}
+    //           key={index}
     //           itemData={itemData}
     //         />
     //       )

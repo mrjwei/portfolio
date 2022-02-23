@@ -12,7 +12,7 @@ export const Contact = () => {
         >
           <span className='inline-block relative z-10 after:underbar after:bg-red-200'>Wanna Hire Me?</span><br />
           <span className='inline-block relative z-10 after:underbar after:bg-red-200'>Got a Question?</span><br />
-          <span className='inline-block relative z-10 after:underbar after:bg-red-200'>Let's Get in Touch!</span>
+          <span className='inline-block relative z-10 after:underbar after:bg-red-200'>Let&apos;s Get in Touch!</span>
         </Title>
         <div>
           <Form

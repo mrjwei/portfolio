@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import {WorkDataType, PostDataType} from '../../types'
 import {Tags} from '../tags'
 
@@ -16,9 +17,7 @@ export const Card = ({itemData, wrapperClassName, cardClassName}: Props) => {
       <Link href={`/works/${id}`}>
         <a className={`drop-shadow-2xl ${wrapperClassName}`}>
           <div className={`card ${cardClassName}`}>
-            <div className="card-img-wrapper">
-              <img src={props.image} alt={description} className="card-img" />
-            </div>
+            <Image src={props.image} alt={description} layout="responsive" width={800} height={400} />
             <div className="card-body">
               <h4>{title}</h4>
               <Tags tags={tags} isLink={false} />

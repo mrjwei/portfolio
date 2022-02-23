@@ -32,12 +32,11 @@ export const Works = ({worksData}: Props) => {
         <ul>
           {worksData.slice(0, 2).map((workData, index) => {
             return (
-              <li className='flex justify-start relative last:mt-12 lg:last:mt-16 lg:justify-center lg:last:-left-16'>
+              <li key={index} className='flex justify-start relative last:mt-12 lg:last:mt-16 lg:justify-center lg:last:-left-16'>
                 <Card
-                  key={index}
                   itemData={workData}
                   wrapperClassName="w-full lg:w-auto"
-                  cardClassName='w-full max-w-md lg:w-80'
+                  cardClassName=''
                 />
               </li>
             )

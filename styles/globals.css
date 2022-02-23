@@ -52,12 +52,6 @@
   .card-body {
     @apply w-full p-8;
   }
-  .card-img-wrapper {
-    @apply overflow-hidden;
-  }
-  .card-img {
-    @apply object-cover object-center;
-  }
   .tags {
     @apply flex;
   }

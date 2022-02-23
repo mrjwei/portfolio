@@ -2,7 +2,7 @@
 title: "Logo Concept: CougarFC"
 tags: ["#logo", "#design", "#concept"]
 description: "A logo designed for CougarFC, a conceptual PL team."
-image: "/images/work-images/cougar-thumbnail.png"
+image: "/images/work-images/cougar.png"
 ---
 This is a logo designed for CougaraFC, a conceptual Premier League team.
 
@@ -16,4 +16,4 @@ Some explorations
 
 ### Completed Work
 
-![completed cougar logo design](/images/work-images/cougar-thumbnail.png)
+![completed cougar logo design](/images/work-images/cougar.png)
