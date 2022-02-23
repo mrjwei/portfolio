@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import {WorkDataType} from '../../types'
 import {Title} from '../sectionTitle';
 import {Card} from '../card'
@@ -25,7 +26,9 @@ export const Works = ({worksData}: Props) => {
           <Link href="/works">
             <a className='text-red-300 flex items-center mb-16 lg:mb-0'>
               <span className='mr-5'>More Works</span>
-              <img className='w-24' src="/images/global-images/more.svg" alt="" />
+              <div className='w-24 relative'>
+                <Image src="/images/global-images/more.svg" alt="more button" width={137} height={95} layout='responsive' />
+              </div>
             </a>
           </Link>
         </div>

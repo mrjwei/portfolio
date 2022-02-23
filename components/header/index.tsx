@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import {FaBars} from 'react-icons/fa';
 import {MobileNav} from './mobile-nav'
 import {PCNav} from './pc-nav'
@@ -43,8 +44,8 @@ export const Header = ({mode}: Props) => {
       <div className="container flex justify-between">
         <div className='flex flex-col justify-center'>
           <Link href="/">
-            <a>
-              <img src={`${mode === "primary" ? "/images/global-images/logo-white.svg" : "/images/global-images/logo-primary.svg"}`} alt="Jesse Wei hp logo" className='w-full max-w-logo' />
+            <a className='w-8'>
+              <Image src={`${mode === "primary" ? "/images/global-images/logo-white.svg" : "/images/global-images/logo-primary.svg"}`} alt="Jesse Wei hp logo" className='w-full max-w-logo' width={222} height={150} layout="responsive" />
             </a>
           </Link>
         </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   SiGithub,
   SiTwitter,
@@ -15,8 +16,8 @@ export const Footer = ({position}: Props) => {
       <div className='container'>
         <div className="lg:grid lg:grid-cols-2 lg:mb-8">
           <Link href="/">
-            <a className='hidden lg:flex lg:flex-col lg:justify-center'>
-              <img className='max-w-[10rem]' src="/images/global-images/logo-with-text.svg" alt="Jesse Wei hp logo" />
+            <a className='relative hidden w-36 lg:flex lg:flex-col lg:justify-center'>
+              <Image className='max-w-[10rem]' src="/images/global-images/logo-with-text.svg" alt="Jesse Wei hp logo" layout='responsive' width={300} height={48} />
             </a>
           </Link>
           <ul className='flex justify-center mb-8 lg:mb-0 lg:justify-end'>

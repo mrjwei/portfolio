@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image';
 import {PostDataType} from '../../types'
 import {Title} from '../sectionTitle';
 import {Card} from '../card'
@@ -24,7 +25,9 @@ export const Posts = ({postsData}: Props) => {
           <Link href="/posts">
             <a className='text-red-300 flex items-center'>
               <span className='mr-5'>More Posts</span>
-              <img className='w-24' src="/images/global-images/more.svg" alt="" />
+              <div  className='w-24 relative'>
+                <Image className='w-24' src="/images/global-images/more.svg" alt="more button" width={137} height={95} layout='responsive' />
+              </div>
             </a>
           </Link>
         </div>
