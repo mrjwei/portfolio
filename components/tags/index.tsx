@@ -14,7 +14,7 @@ export const Tags = ({tags, isLink, fontSize = "text-sm"}: Props) => {
           <li key={tag} className="tag">
             {isLink ? (
               <Link href="/">
-                <a className={`${fontSize} tracking-normal`}>{tag}</a>
+                <a className={`${fontSize} text-red-300 tracking-normal`}>{tag}</a>
               </Link>
             ) : (
               <>{tag}</>
