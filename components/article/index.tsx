@@ -14,7 +14,9 @@ export const Article = ({item}: Props) => {
         <div>
           <h1 className="text-5xl mb-3">{title}</h1>
           <Tags tags={tags} isLink={true} fontSize="text-lg" />
-          <div className='mt-8' dangerouslySetInnerHTML={{__html: content}} />
+          <div className='mt-12' dangerouslySetInnerHTML={{
+            __html: `<div class="prose prose-a:text-red-300 prose-h2:text-3xl prose-h2:mb-8 prose-h3:text-2xl prose-h3:mb-6 prose-h4:text-xl prose-h4:underline prose-h4:mb-6">${content}</div>`
+          }} />
         </div>
       </article>
     )
