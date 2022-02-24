@@ -8,6 +8,7 @@ image: "/images/work-images/cafeleo.png"
 ![completed cafeleo logo design](/images/work-images/cafeleo.png)
 
 This is a logo designed for CougaraFC, a conceptual Premier League team.
+___
 
 ### Concept
 
