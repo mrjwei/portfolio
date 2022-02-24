@@ -24,7 +24,7 @@ const FILTERVALUES = {
   ILLUSTRATIONS: "#illustration",
 }
 
-const ITEMPERPAGE = 2
+const ITEMPERPAGE = 6
 
 const Works =  ({worksData}: Props) => {
   const router = useRouter()

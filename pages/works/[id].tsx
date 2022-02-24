@@ -22,7 +22,7 @@ const Work =  ({item}: Props) => {
         <link rel="icon" href="/images/global-images/favicon.png" />
       </Head>
       <Header mode="light" />
-      <div className='container py-20 lg:grid lg:grid-cols-3'>
+      <div className='container py-36 lg:grid lg:grid-cols-3'>
         <Article item={item} />
       </div>
       <Footer position='static' />
