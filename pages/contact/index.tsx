@@ -27,7 +27,6 @@ const Contact =  () => {
           <Form
             mode="light"
             withBorder={true}
-            action="/contact/?success=true"
           />
         </div>
       </Main>

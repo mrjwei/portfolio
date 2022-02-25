@@ -9,7 +9,7 @@ export const FirstView = () => {
           I Create Beautiful & User-Friendly Web Services That Help Business Grow.
         </h1>
         <div className="w-full h-[30rem] relative flex justify-center md:h-full md:justify-end">
-          <Image src="/images/global-images/first-view-illustration.svg" alt="first view illustration of Jesse Wei" className="" layout='fill' objectFit='contain' />
+          <Image src="/images/global-images/first-view-illustration.svg" alt="first view illustration of Jesse Wei" layout='fill' objectFit='contain' />
         </div>
       </div>
     </div>

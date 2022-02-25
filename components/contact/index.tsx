@@ -17,7 +17,6 @@ export const Contact = () => {
         <div>
           <Form
             mode="primary"
-            action="/contact/?success=true"
           />
         </div>
       </div>
