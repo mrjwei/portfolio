@@ -11,7 +11,7 @@ date: "2021-12-03"
 Moneyforward, Inc. is one of the dominant player in the cloud accounting market in Japan. I joined their HR Management product team in July 2021 and worked on the development of the app.
 ___
 
-### My Responsibilities
+## My Responsibilities
 
 1. Frontend development of custom categories and fields.
 2. UI optimization of navigations, popups, forms and more.
@@ -19,7 +19,7 @@ ___
 
 ___
 
-### My Outputs
+## My Outputs
 
 1. I created consistent functionality and UI of tax-related input areas which got very positive feedbacks from customers.
 2. I optimized routing logics which resulted in a much smoother flow of navigation. This made the app's user experience even more intuitive.

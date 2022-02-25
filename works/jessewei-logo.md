@@ -13,11 +13,11 @@ date: "2021-11-28"
 This is logo for Jesse Wei HP (this website). The concept originated from the intials of "Jesse Wei" (J and W).
 ___
 
-### Concept Evolution
+## Concept Evolution
 
 ![jesse wei logo concept evolution image](/images/work-images/jessewei-evolution.png)
 ___
 
-### Precise Shapes and Positions
+## Precise Shapes and Positions
 
 ![jesse wei logo grid](/images/work-images/jessewei-grid.png)
