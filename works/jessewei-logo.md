@@ -3,6 +3,7 @@ title: "Jesse Wei Logo"
 tags: ["#logo", "#design"]
 description: "Logo for Jesse Wei HP"
 image: "/images/work-images/jessewei.png"
+date: "2021-11-28"
 ---
 
 ![jesse wei logo image](/images/work-images/jessewei.png)

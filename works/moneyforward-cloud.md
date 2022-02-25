@@ -3,6 +3,7 @@ title: "Moneyforward Cloud: Full-stack Development"
 tags: ["#app"]
 description: "Development of Moneyforward Cloud, a leading cloud platform in Japan that makes accounting easy and fast."
 image: "/images/work-images/moneyforward-cloud-hr.png"
+date: "2021-12-03"
 ---
 
 ![image of one of moneyforward cloud products, the hr management app](/images/work-images/moneyforward-cloud-hr.png)

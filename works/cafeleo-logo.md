@@ -3,6 +3,7 @@ title: "Concept Logo: Cafe Leo"
 tags: ["#logo", "#design", "#concept"]
 description: "A logo designed for Cafe Leo, a conceptual vintage cafe."
 image: "/images/work-images/cafeleo.png"
+date: "2020-12-15"
 ---
 
 ![completed cafeleo logo design](/images/work-images/cafeleo.png)
