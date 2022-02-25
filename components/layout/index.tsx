@@ -7,7 +7,7 @@ type Props = {
 
 export const Layout = ({className, children}: Props) => {
   return (
-    <div className={`w-full relative ${className}`}>
+    <div className={`w-full relative overflow-hidden ${className}`}>
       {children}
     </div>
   )
