@@ -1,15 +1,15 @@
 import Link from 'next/link'
-import {Work, WorkDataType, Post} from '../../types'
+import {Work, WorkDataType, Post, PostDataType} from '../../types'
 import {Tags} from '../tags'
 import {Button} from '../button'
 
 type Props = {
   item: Work | Post
-  prevWorkData: WorkDataType | null
-  nextWorkData: WorkDataType | null
+  prevData: WorkDataType | PostDataType | null
+  nextData: WorkDataType | PostDataType | null
 }
 
-export const Article = ({item, prevWorkData, nextWorkData}: Props) => {
+export const Article = ({item, prevData, nextData}: Props) => {
   const {title, tags, content} = item
 
   return (
@@ -24,9 +24,9 @@ export const Article = ({item, prevWorkData, nextWorkData}: Props) => {
       </div>
       <div className='w-full flex justify-between'>
         <div className='flex'>
-          {prevWorkData ? (
+          {prevData ? (
             <Button mode='primary-text' className='mr-12'>
-              <Link href={`/works/${prevWorkData.id}`}>
+              <Link href={`/works/${prevData.id}`}>
                 Prev Work
               </Link>
             </Button>
@@ -35,9 +35,9 @@ export const Article = ({item, prevWorkData, nextWorkData}: Props) => {
               Prev Work
             </Button>
           )}
-          {nextWorkData ? (
+          {nextData ? (
             <Button mode='primary-text'>
-              <Link href={`/works/${nextWorkData.id}`}>
+              <Link href={`/works/${nextData.id}`}>
                 Next Work
               </Link>
             </Button>

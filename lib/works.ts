@@ -25,7 +25,7 @@ export const getWorksData = () => {
   return worksData
 }
 
-export const getAllWorkIds = () => {
+export const getWorkIds = () => {
   return fileNames.map(fileName => {
     return {
       params: {

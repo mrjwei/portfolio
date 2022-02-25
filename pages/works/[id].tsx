@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import {Work, WorkDataType} from '../../types'
-import {Button} from '../../components/button'
 import {Layout} from '../../components/layout'
 import {Header} from '../../components/header'
 import {Article} from '../../components/article'
 import {Sidebar} from '../../components/sidebar'
 import {Footer} from '../../components/footer'
-import { getAllWorkIds, getWorkDataAndContent, getWorksData } from '../../lib/works'
+import { getWorkIds, getWorkDataAndContent, getWorksData } from '../../lib/works'
 import { areSimilar } from '../../lib/utils'
 
 type Props = {
@@ -21,8 +20,8 @@ const Work =  ({item, allWorksData, allWorkIds}: Props) => {
   const allOtherItems = allWorksData.filter(workData => workData.id !== item.id)
   const similarWorksData = allOtherItems.filter(workData => areSimilar(workData.tags, item.tags))
 
+  // get prev and next work
   const currentIndex = allWorkIds.indexOf(item.id)
-
   const prevWorkData = currentIndex === 0 ? null : allWorksData[currentIndex - 1]
   const nextWorkData = currentIndex === allWorkIds.length - 1 ? null : allWorksData[currentIndex + 1]
 
@@ -37,8 +36,8 @@ const Work =  ({item, allWorksData, allWorkIds}: Props) => {
       <div className='container py-36 lg:grid lg:grid-cols-3 lg:gap-16'>
         <Article
           item={item}
-          prevWorkData={prevWorkData}
-          nextWorkData={nextWorkData}
+          prevData={prevWorkData}
+          nextData={nextWorkData}
         />
         <Sidebar items={similarWorksData} />
       </div>
@@ -50,7 +49,7 @@ const Work =  ({item, allWorksData, allWorkIds}: Props) => {
 export default Work
 
 export const getStaticPaths = async () => {
-  const paths = getAllWorkIds()
+  const paths = getWorkIds()
   return {
     paths,
     fallback: false
@@ -60,7 +59,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({params}: {params: {id: string}}) => {
   const item = await getWorkDataAndContent(params.id)
   const allWorksData = getWorksData()
-  const allWorkIds = getAllWorkIds().map(item => item.params.id)
+  const allWorkIds = getWorkIds().map(item => item.params.id)
 
   return {
     props: {

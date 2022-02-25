@@ -2,16 +2,28 @@ import Head from 'next/head'
 import {Post, PostDataType} from '../../types'
 import {Layout} from '../../components/layout';
 import {Header} from '../../components/header'
-import {Article} from '../../components/article';
+import {Article} from '../../components/article'
 import {Sidebar} from '../../components/sidebar'
+import {Footer} from '../../components/footer'
 import {getPostIds, getPostContentAndData, getPostsData} from '../../lib/posts'
+import { areSimilar } from '../../lib/utils'
 
 type Props = {
   item: Post
-  moreItems: Array<PostDataType>
+  allPostsData: PostDataType[]
+  allPostIds: string[]
 }
 
-const Post =  ({item, moreItems}: Props) => {
+const Post =  ({item, allPostsData, allPostIds}: Props) => {
+  // get similar works by check if a work share at least one tag with currently displayed one
+  const allOtherItems = allPostsData.filter(postData => postData.id !== item.id)
+  const similarPostsData = allOtherItems.filter(postData => areSimilar(postData.tags, item.tags))
+
+  // get prev and next work
+  const currentIndex = allPostIds.indexOf(item.id)
+  const prevPostData = currentIndex === 0 ? null : allPostsData[currentIndex - 1]
+  const nextPostData = currentIndex === allPostIds.length - 1 ? null : allPostsData[currentIndex + 1]
+
   return (
     <Layout>
       <Head>
@@ -22,10 +34,11 @@ const Post =  ({item, moreItems}: Props) => {
       <Header mode="light" />
       <Article
         item={item}
+        prevData={prevPostData}
+        nextData={nextPostData}
       />
-      <Sidebar
-        items={moreItems}
-      />
+      <Sidebar items={similarPostsData}/>
+      <Footer position='static' />
     </Layout>
   )
 }
@@ -40,13 +53,15 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async ({params}: any) => {
+export const getStaticProps = async ({params}: {params: {id: string}}) => {
   const item = await getPostContentAndData(params.id)
-  const moreItems = getPostsData((fileName: string) => !fileName.includes(item.id))
+  const allPostsData = getPostsData()
+  const allPostIds = getPostIds().map(item => item.params.id)
   return {
     props: {
       item,
-      moreItems
+      allPostsData,
+      allPostIds
     }
   }
 }
