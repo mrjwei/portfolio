@@ -1,3 +1,7 @@
+export const areSimilar = <T extends unknown>(arr1: Array<T>, arr2: Array<T>) => {
+  return arr1.some(item => arr2.includes(item))
+}
+
 export const getNumOfPages = (numOfTotalItems: number, numOfItemsPerPage: number): number => {
   let numOfPages = 0
   let numOfItemsLeft = numOfTotalItems

@@ -3,42 +3,25 @@ import path from 'path'
 import matter from 'gray-matter'
 import {remark} from 'remark'
 import html from 'remark-html'
+import {WorkDataType} from '../types'
 
 const worksDir = path.join(process.cwd(), "works")
 const fileNames = fs.readdirSync(worksDir)
 
-export const getWorksData = (filterFunc?: (a: string) => boolean) => {
-  let worksData
+export const getWorksData = () => {
+  const worksData = fileNames.map(fileName => {
+    const id = fileName.replace(/\.md$/, '')
 
-  if (filterFunc) {
-    worksData = fileNames.filter(filterFunc).map(fileName => {
-      const id = fileName.replace(/\.md$/, '')
+    const fullPath = path.join(worksDir, fileName)
+    const fileContent = fs.readFileSync(fullPath, "utf8")
 
-      const fullPath = path.join(worksDir, fileName)
-      const fileContent = fs.readFileSync(fullPath, "utf8")
+    const frontMatter = matter(fileContent)
 
-      const frontMatter = matter(fileContent)
-
-      return {
-        id,
-        ...frontMatter.data
-      }
-    })
-  } else {
-    worksData = fileNames.map(fileName => {
-      const id = fileName.replace(/\.md$/, '')
-
-      const fullPath = path.join(worksDir, fileName)
-      const fileContent = fs.readFileSync(fullPath, "utf8")
-
-      const frontMatter = matter(fileContent)
-
-      return {
-        id,
-        ...frontMatter.data
-      }
-    })
-  }
+    return {
+      id,
+      ...frontMatter.data
+    }
+  })
   return worksData
 }
 

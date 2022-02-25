@@ -17,7 +17,7 @@ export const Tags = ({tags, isLink, fontSize = "text-sm"}: Props) => {
                 <a className={`${fontSize} text-red-300 tracking-normal`}>{tag}</a>
               </Link>
             ) : (
-              <>{tag}</>
+              <div className='text-red-300'>{tag}</div>
             )}
           </li>
         )

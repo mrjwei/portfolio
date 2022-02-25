@@ -7,21 +7,21 @@ type Props = {
 
 export const Sidebar = ({items}: Props) => {
   return (
-    // <div className='hidden lg:block'>
-    //   <h2 className='text-xl'>More {"image" in items[0] ? "Works" : "Posts"}</h2>
-    //   <ul>
-    //     {items.map((item, index: number) => {
-    //       const {itemData} = item
-    //       return (
-    //         <Card
-    //           key={index}
-    //           itemData={itemData}
-    //         />
-    //       )
-    //     })}
-    //   </ul>
-    // </div>
-    <div>sidebar</div>
+    <div className='hidden lg:block'>
+      <h2 className='text-xl mb-8'>You may also like</h2>
+      <ul>
+        {items.map((item, index: number) => {
+          return (
+            <li className='mb-12'>
+              <Card
+                key={index}
+                itemData={item}
+              />
+            </li>
+          )
+        })}
+      </ul>
+    </div>
   )
 }
 

@@ -19,7 +19,7 @@ export const Card = ({itemData, wrapperClassName, cardClassName}: Props) => {
           <div className={`card ${cardClassName}`}>
             <Image src={props.image} alt={description} layout="responsive" width={800} height={400} />
             <div className="card-body">
-              <h4>{title}</h4>
+              <h4 className='text-lg mb-2'>{title}</h4>
               <Tags tags={tags} isLink={false} />
             </div>
           </div>
@@ -33,7 +33,7 @@ export const Card = ({itemData, wrapperClassName, cardClassName}: Props) => {
         <div className="card h-full min-h-card hover:text-red-300">
           <div className="card-body">
             <time className='block text-gray-400 mb-3'>{props.date}</time>
-            <h4 className='mb-1'>{title}</h4>
+            <h4 className='text-lg mb-2'>{title}</h4>
             <Tags tags={tags} isLink={false} />
             <p className='mt-3'>{description.substring(0, 100)}...</p>
           </div>

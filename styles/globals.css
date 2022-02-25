@@ -8,7 +8,7 @@
     @apply text-5xl font-bold lg:text-6xl;
   }
   h2 {
-    @apply text-5xl font-bold lg:text-6xl;
+    @apply text-4xl font-bold lg:text-6xl;
   }
   h3 {
     @apply text-2xl font-bold;
@@ -26,7 +26,7 @@
 
 @layer components {
   .container {
-    @apply px-3 lg:px-0;
+    @apply px-6 lg:px-0;
   }
   .button {
     @apply block w-full p-3 border-solid border-4 text-center rounded-md transition ease-in-out;
@@ -50,7 +50,7 @@
     @apply w-full bg-white mx-auto relative;
   }
   .card-body {
-    @apply w-full p-8;
+    @apply w-full p-6;
   }
   .tags {
     @apply flex;
