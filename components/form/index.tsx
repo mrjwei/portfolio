@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import {useRouter} from 'next/router'
 import { useForm, ValidationError } from '@formspree/react'
 import {Button} from '../button'
 
@@ -10,6 +11,8 @@ type Props = {
 }
 
 export const Form = ({mode, withBorder}: Props) => {
+  const router = useRouter()
+
   const [state, handleSubmit] = useForm("mpzbdvpa")
 
   if (state.succeeded) {
@@ -32,15 +35,17 @@ export const Form = ({mode, withBorder}: Props) => {
   }
 
   return (
-    <div className="container lg:grid lg:grid-cols-2">
-      <div>
-        <h2 className='mb-8'>Contact.</h2>
-        <p className='text-xl mb-14 lg:mb-0'>
-          Whether you&apos;re interested in hiring me<br/>
-          or you&apos;ve got a question to ask,<br/>
-          feel free to get in touch!
-        </p>
-      </div>
+    <div className={`container ${router.asPath === "/contact" && "container lg:grid lg:grid-cols-2"}`}>
+      {router.asPath === "/contact" && (
+        <div>
+          <h2 className='mb-8'>Contact.</h2>
+          <p className='text-xl mb-14 lg:mb-0'>
+            Whether you&apos;re interested in hiring me<br/>
+            or you&apos;ve got a question to ask,<br/>
+            feel free to get in touch!
+          </p>
+        </div>
+      )}
       <form className="block w-full" onSubmit={handleSubmit}>
         <input type="hidden" name="Contact Form" value="contact-form" />
         <div className="mb-6">

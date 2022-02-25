@@ -1,5 +1,5 @@
 type Props = {
-  mode?: "light" | "light-border" | "primary" | "primary-text" | "primary-border"
+  mode?: "light" | "light-text" | "light-border" | "primary" | "primary-text" | "primary-border"
   disabled?: boolean
   className?: string
   children: React.ReactNode
@@ -11,11 +11,20 @@ export const Button = ({mode = "light", disabled = false, className = "", childr
       return (
         <button
           disabled={disabled}
-          className={`block px-3 py-2 bg-white text-sm text-red-300 drop-shadow-2xl rounded-lg disabled:text-red-150 ${className}`}
+          className={`block px-3 py-2 bg-white text-sm text-red-300 drop-shadow-2xl rounded-lg transition-opacity duration-200 hover:opacity-80 disabled:text-red-150 ${className}`}
         >
           {children}
         </button>
       )
+      case "light-text":
+        return (
+          <button
+            disabled={disabled}
+            className={`block px-3 py-2 text-sm text-white underline hover:no-underline disabled:text-mute ${className}`}
+          >
+            {children}
+          </button>
+        )
     case "light-border":
       return (
         <button
