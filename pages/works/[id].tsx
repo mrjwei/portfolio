@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import {Work, WorkDataType} from '../../types'
+import {Button} from '../../components/button'
 import {Layout} from '../../components/layout'
 import {Header} from '../../components/header'
 import {Article} from '../../components/article'
@@ -10,10 +12,20 @@ import { areSimilar } from '../../lib/utils'
 
 type Props = {
   item: Work
-  similarItems: WorkDataType[]
+  allWorksData: WorkDataType[]
+  allWorkIds: string[]
 }
 
-const Work =  ({item, similarItems}: Props) => {
+const Work =  ({item, allWorksData, allWorkIds}: Props) => {
+  // get similar works by check if a work share at least one tag with currently displayed one
+  const allOtherItems = allWorksData.filter(workData => workData.id !== item.id)
+  const similarWorksData = allOtherItems.filter(workData => areSimilar(workData.tags, item.tags))
+
+  const currentIndex = allWorkIds.indexOf(item.id)
+
+  const prevWorkData = currentIndex === 0 ? null : allWorksData[currentIndex - 1]
+  const nextWorkData = currentIndex === allWorkIds.length - 1 ? null : allWorksData[currentIndex + 1]
+
   return (
     <Layout className='bg-mute'>
       <Head>
@@ -23,8 +35,12 @@ const Work =  ({item, similarItems}: Props) => {
       </Head>
       <Header mode="light" />
       <div className='container py-36 lg:grid lg:grid-cols-3 lg:gap-16'>
-        <Article item={item} />
-        <Sidebar items={similarItems} />
+        <Article
+          item={item}
+          prevWorkData={prevWorkData}
+          nextWorkData={nextWorkData}
+        />
+        <Sidebar items={similarWorksData} />
       </div>
       <Footer position='static' />
     </Layout>
@@ -41,16 +57,16 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async ({params}: any) => {
+export const getStaticProps = async ({params}: {params: {id: string}}) => {
   const item = await getWorkDataAndContent(params.id)
-  // get all items except the currently displayed one
-  const allOtherItems = getWorksData().filter(workData => workData.id !== params.id)
-  // from all other items, get ones that share at least one tag with the current one
-  const similarItems = allOtherItems.filter(workData => areSimilar(workData.tags, item.tags))
+  const allWorksData = getWorksData()
+  const allWorkIds = getAllWorkIds().map(item => item.params.id)
+
   return {
     props: {
       item,
-      similarItems
+      allWorksData,
+      allWorkIds
     }
   }
 }

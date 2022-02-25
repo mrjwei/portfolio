@@ -10,11 +10,10 @@ export const Sidebar = ({items}: Props) => {
     <div className='hidden lg:block'>
       <h2 className='text-xl mb-8'>You may also like</h2>
       <ul>
-        {items.map((item, index: number) => {
+        {items.map((item) => {
           return (
-            <li className='mb-12'>
+            <li key={item.id} className='mb-12'>
               <Card
-                key={index}
                 itemData={item}
               />
             </li>
