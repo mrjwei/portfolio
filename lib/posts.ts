@@ -7,38 +7,20 @@ import html from 'remark-html'
 const postsDir = path.join(process.cwd(), "posts")
 const fileNames = fs.readdirSync(postsDir)
 
-export const getPostsData = (filterFunc?: (a: string) => boolean) => {
-  let postsData
+export const getPostsData = () => {
+  const postsData = fileNames.map(fileName => {
+    const id = fileName.replace(/\.md$/, '')
 
-  if (filterFunc) {
-    postsData = fileNames.filter(filterFunc).map(fileName => {
-      const id = fileName.replace(/\.md$/, '')
+    const fullPath = path.join(postsDir, fileName)
+    const fileContent = fs.readFileSync(fullPath, "utf8")
 
-      const fullPath = path.join(postsDir, fileName)
-      const fileContent = fs.readFileSync(fullPath, "utf8")
+    const frontMatter = matter(fileContent)
 
-      const frontMatter = matter(fileContent)
-
-      return {
-        id,
-        ...frontMatter.data
-      }
-    })
-  } else {
-    postsData = fileNames.map(fileName => {
-      const id = fileName.replace(/\.md$/, '')
-
-      const fullPath = path.join(postsDir, fileName)
-      const fileContent = fs.readFileSync(fullPath, "utf8")
-
-      const frontMatter = matter(fileContent)
-
-      return {
-        id,
-        ...frontMatter.data
-      }
-    })
-  }
+    return {
+      id,
+      ...frontMatter.data
+    }
+  })
   return postsData
 }
 
