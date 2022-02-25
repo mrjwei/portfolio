@@ -3,7 +3,6 @@ import path from 'path'
 import matter from 'gray-matter'
 import {remark} from 'remark'
 import html from 'remark-html'
-import {WorkDataType} from '../types'
 
 const worksDir = path.join(process.cwd(), "works")
 const fileNames = fs.readdirSync(worksDir)
