@@ -20,6 +20,7 @@ type Props = {
 const FILTERVALUES = {
   ALL: "#all",
   APPS: "#app",
+  UIUX: "#ui/ux",
   LOGOS: "#logo",
   ILLUSTRATIONS: "#illustration",
 }
@@ -83,6 +84,10 @@ const Works =  ({worksData}: Props) => {
     {
       label: "app",
       value: FILTERVALUES.APPS,
+    },
+    {
+      label: "ui/ux",
+      value: FILTERVALUES.UIUX,
     },
     {
       label: "logo",
