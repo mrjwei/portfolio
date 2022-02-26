@@ -22,21 +22,21 @@ export const Footer = ({position}: Props) => {
           </Link>
           <ul className='flex justify-center mb-8 lg:mb-0 lg:justify-end'>
             <li className='mx-3 lg:mx-6'>
-              <Link href="/">
+              <Link href="https://github.com/mrjwei">
                 <a className='text-2xl text-white'>
                   <SiGithub />
                 </a>
               </Link>
             </li>
             <li className='mx-3 lg:mx-6'>
-              <Link href="/">
+              <Link href="/https://twitter.com/jweiit">
                 <a className='text-2xl text-white'>
                   <SiTwitter />
                 </a>
               </Link>
             </li>
             <li className='mx-3 lg:mx-6 lg:mr-0'>
-              <Link href="/">
+              <Link href="www.pinterest.com/mrjwei">
                 <a className='text-2xl text-white'>
                   <SiPinterest />
                 </a>
