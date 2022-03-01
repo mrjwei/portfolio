@@ -29,14 +29,14 @@ export const Footer = ({position}: Props) => {
               </Link>
             </li>
             <li className='mx-3 lg:mx-6'>
-              <Link href="/https://twitter.com/jweiit">
+              <Link href="https://twitter.com/jweiit">
                 <a className='text-2xl text-white'>
                   <SiTwitter />
                 </a>
               </Link>
             </li>
             <li className='mx-3 lg:mx-6 lg:mr-0'>
-              <Link href="www.pinterest.com/mrjwei">
+              <Link href="https://www.pinterest.com/mrjwei">
                 <a className='text-2xl text-white'>
                   <SiPinterest />
                 </a>
