@@ -37,7 +37,7 @@ export const FirstView = () => {
           </h1>
           <div className='md:flex'>
             <Link href="/contact">
-              <a className='flex justify-center items-center button button-bg-white md:max-w-[12rem] md:mr-12'><span className='mr-3'>Contact Me</span> <BsArrowRight /></a>
+              <a className='flex justify-center items-center button button-bg-white mb-8 md:mb-0 md:max-w-[12rem] md:mr-12'><span className='mr-3'>Contact Me</span> <BsArrowRight /></a>
             </Link>
             <Link href="/works">
               <a className='flex justify-center items-center button button-white md:max-w-[12rem]'><span className='mr-3'>See Works</span> <BsArrowRight /></a>
