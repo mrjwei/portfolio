@@ -20,7 +20,7 @@ export const Contact = () => {
         </Title>
         <Button mode='light' className='px-6 py-4 text-2xl mb-12'>
           <Link href="/contact">
-            <span className='flex items-center'><span className='mr-3'>Contact Form</span> <BsArrowRight /></span>
+            <a className='flex items-center'><span className='mr-3'>Contact Form</span> <BsArrowRight /></a>
           </Link>
         </Button>
         <p className='text-white text-2xl mb-6'>Or via email:</p>
