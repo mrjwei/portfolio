@@ -70,14 +70,23 @@
   .underbar {
     @apply content-[""] block w-full h-4 bg-red-150 absolute left-0 bottom-0 -z-10 lg:h-5;
   }
-  img[src*="#float"] {
+  img[src$="#float"] {
     width: 48%;
     float: left;
   }
-  img[src*="#float"]:last-child {
+  img[src$="#float"]:last-child {
     margin-left: 4%;
   }
-  img[src*="#float"]:last-child::after {
+  img[src$="#float"]:last-child::after {
     clear: both;
+  }
+  .prose :where(code):not(:where([class~="not-prose"] *))::before {
+    content: none;
+  }
+  .prose :where(code):not(:where([class~="not-prose"] *))::after {
+    content: none;
+  }
+  .prose :where(code):not(:where([class~="not-prose"] *)) {
+    @apply bg-[#f3f3f3] p-1;
   }
 }
