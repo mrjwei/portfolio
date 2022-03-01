@@ -288,23 +288,23 @@ First, we need to make some changes to `index.html`. Replace the current `body` 
     <ul class="carousel">
       <li class="carousel-item">
         <h2 class="carousel-title">Detailed User Research to Empathize</h2>
-        <img class="carousel-img" src="./undraw_user_flow_re_bvfx.svg" alt="">
+        <img class="carousel-img" src="./undraw_user_flow_re_bvfx.svg" alt="carousel image 1">
       </li>
       <li class="carousel-item">
         <h2 class="carousel-title">Iterative Design For the Best Idea</h2>
-        <img class="carousel-img" src="./undraw_design_process_re_0dhf.svg" alt="">
+        <img class="carousel-img" src="./undraw_design_process_re_0dhf.svg" alt="carousel image 2">
       </li>
       <li class="carousel-item">
         <h2 class="carousel-title">Experienced Team You Can Trust</h2>
-        <img class="carousel-img" src="./undraw_designer_life_re_6ywf.svg" alt="">
+        <img class="carousel-img" src="./undraw_designer_life_re_6ywf.svg" alt="carousel image 3">
       </li>
       <li class="carousel-item">
         <h2 class="carousel-title">User Experience Is Our NO.1 Priority</h2>
-        <img class="carousel-img" src="./undraw_experience_design_eq-3-j.svg" alt="">
+        <img class="carousel-img" src="./undraw_experience_design_eq-3-j.svg" alt="carousel image 4">
       </li>
       <li class="carousel-item">
         <h2 class="carousel-title">Every Solution Follows the Best Design Practics</h2>
-        <img class="carousel-img" src="./undraw_modern_design_v-3-wv.svg" alt="">
+        <img class="carousel-img" src="./undraw_modern_design_v-3-wv.svg" alt="carousel image 5">
       </li>
     </ul>
     <ul class="indicator-wrapper">
