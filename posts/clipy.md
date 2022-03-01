@@ -21,25 +21,29 @@ Installation is easy and just follow these steps:
 - After the download is completed, double-click the downloaded file.
 - Drag the Clipy icon into Applications directory and you are ready to go!
 
+___
+
 ## Basic Usage
 
 ### Start and Open Clipy
 
-- If you have not started Clipy, go to Applications directory and find Clipy icon. Then double-click it.
+- If you have not started Clipy, go to *Applications* directory, find Clipy icon and double-click it.
 If it is started, its icon should appear in the Menu Bar like this.
 
-[Clipy icon in Menu Bar](/images/post-images/clipy-icon.png)
+![Clipy icon in Menu Bar](/images/post-images/clipy-icon.png)
 
 - After you started it, try clicking the icon. It should look something like this.
 
-[open Clipy menu](/images/post-images/clipy-menu.png)
+![open Clipy menu](/images/post-images/clipy-menu.png)
 
 - Then try hovering on the directory icon. Items that you copied recently will appear like this.
 
-[Clipy icon in Menu Bar](/images/post-images/clipy-history.png)
+![Clipy icon in Menu Bar](/images/post-images/clipy-history.png)
+
+### Configuration
+
+___
 
 ## Advanced Usage
 
 Coming soon...
-
-___
