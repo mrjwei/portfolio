@@ -133,9 +133,8 @@ const Posts =  ({postsData}: Props) => {
             <div className='my-24 md:grid md:grid-cols-2 md:gap-12 md:justify-items-stretch lg:grid-cols-3 lg:gap-x-24 lg:gap-y-20'>
               {postsData.slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((postData, index) => {
                 return (
-                  <div className='mb-8 md:mb-0'>
+                  <div key={index} className='mb-8 md:mb-0'>
                     <Card
-                      key={index}
                       entryData={postData}
                       wrapperClassName="w-full"
                       cardClassName="h-full"
@@ -148,9 +147,8 @@ const Posts =  ({postsData}: Props) => {
             <div className='my-24 md:grid md:grid-cols-2 md:gap-12 md:justify-items-stretch lg:grid-cols-3 lg:gap-x-24 lg:gap-y-20'>
               {postsData.filter(postData => postData.tags.includes(filterValue)).slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((postData, index) => {
                 return (
-                  <div className='mb-8 md:mb-0'>
+                  <div key={index} className='mb-8 md:mb-0'>
                     <Card
-                      key={index}
                       entryData={postData}
                       wrapperClassName="w-full"
                       cardClassName="h-full"
