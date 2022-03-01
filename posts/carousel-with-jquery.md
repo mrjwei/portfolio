@@ -50,6 +50,8 @@ Then run the following command to create our files.
 
 `$ touch index.html style.css script.js`
 
+___
+
 ## HTML Boilerplate
 
 Open the newly created `index.html` file in a code editor of your choice and paste the following code in it.
@@ -78,6 +80,8 @@ Open the newly created `index.html` file in a code editor of your choice and pas
 </body>
 </html>
 ```
+
+___
 
 ## Reference Style & JS Files
 
@@ -122,11 +126,13 @@ Then add our custom `script.js` file to `<head>` below the jQuery script tags.
 </head>
 ```
 
+___
+
 ## Basic Styles
 
 Open the `index.html` file in browser of your choice. Up until this point, our carousel should look like this.
 
-![carousel in progress](/public/images/post-images/carousel-in-progress.png)
+![carousel in progress](/images/post-images/carousel-in-progress.png)
 
 We need some styles to make it look better. Add the following code to your `style.css` file.
 
@@ -157,7 +163,9 @@ We need some styles to make it look better. Add the following code to your `styl
 
 Now open `index.html` in your browser again. It looks a little better now.
 
-![carousel in progress 2](/public/images/post-images/carousel-in-progress-2.png)
+![carousel in progress 2](/images/post-images/carousel-in-progress-2.png)
+
+___
 
 ## Make It Move
 
@@ -257,7 +265,9 @@ Now, open `index.html` in brower again and the carousel should be moving automat
 
 Try clicking prev and next button, it should make the carousel move instantly, forward or backward.
 
-![carousel in progress 3](/public/images/post-images/carousel-in-progress-3.gif)
+![carousel in progress 3](/images/post-images/carousel-in-progress-3.gif)
+
+___
 
 ## Fix a Tiny Bug
 
@@ -274,7 +284,9 @@ We can fix this easily by adding `overflow: hidden` to the `.carousel` element i
 
 Check the behaviour of the carousel again and everything should be working properly.
 
-![carousel in progress 4](/public/images/post-images/carousel-in-progress-4.gif)
+![carousel in progress 4](/images/post-images/carousel-in-progress-4.gif)
+
+___
 
 ## More Styles (optional)
 
@@ -321,6 +333,8 @@ Because we want the number of indicators to be dynamic, here we avoid hardcoding
 Then, open `style.css` and replace everything with the following.
 
 ```css
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
 ul {
   list-style: none;
   padding: 0;
@@ -354,12 +368,15 @@ button {
   justify-content: space-between;
 }
 .carousel-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
   height: 20%;
   margin: 0 auto 5%;
   text-align: center;
 }
 .carousel-img {
   height: 75%;
+  object-fit: contain;
 }
 .arrow-btn {
   display: block;
@@ -473,7 +490,9 @@ Finally, go to [undraw](https://undraw.co/), find a couple of cool illustrations
 
 Your final carousel should look like this one.
 
-![carousel](/public/images/post-images/carousel.gif)
+![carousel](/images/post-images/carousel.gif)
+
+___
 
 ## Conclusion & Challenges
 
