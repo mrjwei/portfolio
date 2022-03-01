@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import {GetStaticProps} from 'next'
-import {getWorksData} from '../lib/works'
-import {getPostsData} from '../lib/posts'
+import {getEntriesData} from '../lib/entries'
 import {Layout} from '../components/layout'
 import {Header} from '../components/header'
 import {FirstView} from '../components/first-view';
@@ -42,8 +41,8 @@ const Home = ({worksData, postsData}: any) => {
 export default Home
 
 export const getStaticProps: GetStaticProps = async () => {
-  const worksData = getWorksData()
-  const postsData = getPostsData()
+  const worksData = getEntriesData("works")
+  const postsData = getEntriesData("posts")
   return {
     props: {
       worksData,

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import {useRouter} from 'next/router'
 import {GetStaticProps} from 'next'
 import {PostDataType} from '../../types';
-import {getPostsData} from '../../lib/posts'
+import {getEntriesData} from '../../lib/entries'
 import {getNumOfPages} from '../../lib/utils'
 import {Layout} from '../../components/layout'
 import {Header} from '../../components/header'
@@ -135,7 +135,7 @@ const Posts =  ({postsData}: Props) => {
                 return (
                   <Card
                     key={index}
-                    itemData={postData}
+                    entryData={postData}
                     wrapperClassName="w-full"
                     cardClassName="h-full"
                   />
@@ -148,7 +148,7 @@ const Posts =  ({postsData}: Props) => {
                 return (
                   <Card
                     key={index}
-                    itemData={postData}
+                    entryData={postData}
                     wrapperClassName="w-full"
                     cardClassName="h-full"
                   />
@@ -173,7 +173,7 @@ const Posts =  ({postsData}: Props) => {
 export default Posts
 
 export const getStaticProps: GetStaticProps = async () => {
-  const postsData = getPostsData()
+  const postsData = getEntriesData("posts")
   return {
     props: {
       postsData

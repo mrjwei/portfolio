@@ -4,13 +4,13 @@ import {WorkDataType, PostDataType} from '../../types'
 import {Tags} from '../tags'
 
 type Props = {
-  itemData: WorkDataType | PostDataType
+  entryData: WorkDataType | PostDataType
   wrapperClassName?: string
   cardClassName?: string
 }
 
-export const Card = ({itemData, wrapperClassName, cardClassName}: Props) => {
-  const {id, title, tags, description, ...props} = itemData
+export const Card = ({entryData, wrapperClassName, cardClassName}: Props) => {
+  const {id, title, tags, description, ...props} = entryData
 
   if ("image" in props) {
     return (

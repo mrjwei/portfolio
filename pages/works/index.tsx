@@ -3,7 +3,7 @@ import Head from 'next/head'
 import {useRouter} from 'next/router'
 import {GetStaticProps} from 'next'
 import {WorkDataType} from '../../types';
-import {getWorksData} from '../../lib/works'
+import {getEntriesData} from '../../lib/entries'
 import {getNumOfPages} from '../../lib/utils'
 import {Layout} from '../../components/layout'
 import {Header} from '../../components/header'
@@ -130,7 +130,7 @@ const Works =  ({worksData}: Props) => {
                 return (
                   <Card
                     key={index}
-                    itemData={workData}
+                    entryData={workData}
                     wrapperClassName="w-full"
                     cardClassName="h-full"
                   />
@@ -143,7 +143,7 @@ const Works =  ({worksData}: Props) => {
                 return (
                   <Card
                     key={index}
-                    itemData={workData}
+                    entryData={workData}
                     wrapperClassName="w-full"
                     cardClassName="h-full"
                   />
@@ -168,7 +168,7 @@ const Works =  ({worksData}: Props) => {
 export default Works
 
 export const getStaticProps: GetStaticProps = async () => {
-  const worksData = getWorksData()
+  const worksData = getEntriesData("works")
   return {
     props: {
       worksData
