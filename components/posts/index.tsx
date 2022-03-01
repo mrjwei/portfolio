@@ -36,7 +36,7 @@ export const Posts = ({postsData}: Props) => {
             return (
               <li key={index} className="z-10 h-full transition-transform ease-in-out duration-500 hover:-translate-y-6 mb-12 last:mb-0 lg:mb-0">
                 <Card
-                  itemData={postData}
+                  entryData={postData}
                 />
               </li>
             )
