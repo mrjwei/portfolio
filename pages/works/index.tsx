@@ -125,28 +125,32 @@ const Works =  ({worksData}: Props) => {
             })}
           </div>
           {filterValue === "#all" ? (
-            <div className='my-24 lg:grid lg:grid-cols-3 lg:justify-items-stretch lg:gap-x-24 lg:gap-y-20'>
+            <div className='my-24 md:grid md:grid-cols-2 md:gap-12 md:justify-items-stretch lg:grid-cols-3 lg:gap-x-24 lg:gap-y-20'>
               {worksData.slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((workData, index) => {
                 return (
-                  <Card
-                    key={index}
-                    entryData={workData}
-                    wrapperClassName="w-full"
-                    cardClassName="h-full"
-                  />
+                  <div className='mb-8 md:mb-0'>
+                    <Card
+                      key={index}
+                      entryData={workData}
+                      wrapperClassName="w-full"
+                      cardClassName="h-full"
+                    />
+                  </div>
                 )
               })}
             </div>
           ) : (
-            <div className='my-24 lg:grid lg:grid-cols-3 lg:justify-items-stretch lg:gap-x-24 lg:gap-y-20'>
+            <div className='my-24 md:grid md:grid-cols-2 md:gap-12 md:justify-items-stretch lg:grid-cols-3 lg:gap-x-24 lg:gap-y-20'>
               {worksData.filter(workData => workData.tags.includes(filterValue)).slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((workData, index) => {
                 return (
-                  <Card
-                    key={index}
-                    entryData={workData}
-                    wrapperClassName="w-full"
-                    cardClassName="h-full"
-                  />
+                  <div className='mb-8 md:mb-0'>
+                    <Card
+                      key={index}
+                      entryData={workData}
+                      wrapperClassName="w-full"
+                      cardClassName="h-full"
+                    />
+                  </div>
                 )
               })}
             </div>

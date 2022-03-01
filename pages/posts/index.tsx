@@ -130,28 +130,32 @@ const Posts =  ({postsData}: Props) => {
             })}
           </div>
           {filterValue === "#all" ? (
-            <div className='my-24 lg:grid lg:grid-cols-3 lg:justify-items-stretch lg:gap-x-24 lg:gap-y-20'>
+            <div className='my-24 md:grid md:grid-cols-2 md:gap-12 md:justify-items-stretch lg:grid-cols-3 lg:gap-x-24 lg:gap-y-20'>
               {postsData.slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((postData, index) => {
                 return (
-                  <Card
-                    key={index}
-                    entryData={postData}
-                    wrapperClassName="w-full"
-                    cardClassName="h-full"
-                  />
+                  <div className='mb-8 md:mb-0'>
+                    <Card
+                      key={index}
+                      entryData={postData}
+                      wrapperClassName="w-full"
+                      cardClassName="h-full"
+                    />
+                  </div>
                 )
               })}
             </div>
           ) : (
-            <div className='my-24 lg:grid lg:grid-cols-3 lg:justify-items-stretch lg:gap-x-24 lg:gap-y-20'>
+            <div className='my-24 md:grid md:grid-cols-2 md:gap-12 md:justify-items-stretch lg:grid-cols-3 lg:gap-x-24 lg:gap-y-20'>
               {postsData.filter(postData => postData.tags.includes(filterValue)).slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((postData, index) => {
                 return (
-                  <Card
-                    key={index}
-                    entryData={postData}
-                    wrapperClassName="w-full"
-                    cardClassName="h-full"
-                  />
+                  <div className='mb-8 md:mb-0'>
+                    <Card
+                      key={index}
+                      entryData={postData}
+                      wrapperClassName="w-full"
+                      cardClassName="h-full"
+                    />
+                  </div>
                 )
               })}
             </div>
