@@ -12,7 +12,7 @@ export const Sidebar = ({entries}: Props) => {
       <ul>
         {entries.map((entry) => {
           return (
-            <li key={entry.id} className='mb-12'>
+            <li key={entry.id} className='mb-12 drop-shadow-card'>
               <Card
                 entryData={entry}
               />

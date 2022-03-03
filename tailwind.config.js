@@ -37,6 +37,10 @@ module.exports = {
         },
         'mute': '#F7F5F5',
       },
+      dropShadow: {
+        "button": '0 15px 15px rgb(0 0 0 / 0.03)',
+        "card": ['0 30px 20px rgb(0 0 0 / 0.03)', '0 10px 10px rgb(0 0 0 / 0.03)'],
+      },
     },
   },
   plugins: [

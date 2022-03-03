@@ -11,7 +11,7 @@ export const Button = ({mode = "light", disabled = false, className = "", childr
       return (
         <button
           disabled={disabled}
-          className={`block px-3 py-2 bg-white text-sm text-red-300 drop-shadow-2xl rounded-lg transition-opacity duration-200 hover:opacity-80 disabled:text-red-150 ${className}`}
+          className={`block px-3 py-2 bg-white text-sm text-red-300 drop-shadow-card rounded-lg transition-opacity duration-200 hover:opacity-80 disabled:text-red-150 ${className}`}
         >
           {children}
         </button>
@@ -29,7 +29,7 @@ export const Button = ({mode = "light", disabled = false, className = "", childr
       return (
         <button
           disabled={disabled}
-          className={`block px-3 py-2 bg-white text-sm text-red-300 drop-shadow-2xl rounded-lg disabled:text-red-150 ${className}`}
+          className={`block px-3 py-2 bg-white text-sm text-red-300 drop-shadow-card rounded-lg disabled:text-red-150 ${className}`}
         >
           {children}
         </button>
@@ -38,7 +38,7 @@ export const Button = ({mode = "light", disabled = false, className = "", childr
       return (
         <button
           disabled={disabled}
-          className={`block px-3 py-2 bg-red-300 text-sm text-white drop-shadow-2xl rounded-lg disabled:bg-red-150 ${className}`}
+          className={`block px-3 py-2 bg-red-300 text-sm text-white drop-shadow-card rounded-lg disabled:bg-red-150 ${className}`}
         >
           {children}
         </button>
@@ -65,7 +65,7 @@ export const Button = ({mode = "light", disabled = false, className = "", childr
       return (
         <button
           disabled={disabled}
-          className={`block px-3 py-2 bg-white text-sm text-red-300 drop-shadow-2xl rounded-lg disabled:text-red-150 ${className}`}
+          className={`block px-3 py-2 bg-white text-sm text-red-300 drop-shadow-card rounded-lg disabled:text-red-150 ${className}`}
         >
           {children}
         </button>

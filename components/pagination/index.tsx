@@ -43,7 +43,7 @@ export const Pagination = ({
   return (
     <div className="flex justify-center">
       <button
-          className="w-16 button drop-shadow-xl button-bg-white text-sm px-3 py-1 mr-6"
+          className="w-16 button drop-shadow-button button-bg-white text-sm px-3 py-1 mr-6"
           disabled={currentPage === 1}
           onClick={handleMovePrev}
         >
@@ -55,7 +55,7 @@ export const Pagination = ({
         handleClick={handleMoveToPage}
       />
       <button
-          className="w-16 button drop-shadow-xl button-bg-white text-sm px-3 py-1 ml-6"
+          className="w-16 button drop-shadow-button button-bg-white text-sm px-3 py-1 ml-6"
           disabled={currentPage === numOfPages}
           onClick={handleMoveNext}
         >

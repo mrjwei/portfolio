@@ -15,7 +15,7 @@ export const Card = ({entryData, wrapperClassName, cardClassName}: Props) => {
   if ("image" in props) {
     return (
       <Link href={`/works/${id}`}>
-        <a className={`drop-shadow-2xl ${wrapperClassName}`}>
+        <a className={`drop-shadow-card ${wrapperClassName}`}>
           <div className={`card rounded-md ${cardClassName}`}>
             <Image src={props.image} alt={description} layout="responsive" width={800} height={400} />
             <div className="card-body">
@@ -29,7 +29,7 @@ export const Card = ({entryData, wrapperClassName, cardClassName}: Props) => {
   }
   return (
     <Link href={`/posts/${id}`}>
-      <a className='block w-full h-full drop-shadow-2xl border-solid border-t-[0.8rem] border-red-300'>
+      <a className='block w-full h-full drop-shadow-card border-solid border-t-[0.8rem] border-red-300'>
         <div className="card rounded-md h-full min-h-card hover:text-red-300">
           <div className="card-body">
             <time className='block text-gray-400 mb-3'>{props.date}</time>
