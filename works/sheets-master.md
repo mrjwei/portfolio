@@ -1,7 +1,7 @@
 ---
 title: "Sheets Master: A Python Program That Automates Google Sheets Tasks"
 tags: ["#python", "#productivity"]
-description: "This Python program helped my colleagues save as much as 12 hours/month that had been spent on working with Google Sheets."
+description: "This Python program helped my colleagues save as many as 12 hours/month that had been spent on working with Google Sheets."
 image: "/images/work-images/sheets-master-cover.png"
 date: "2019-02-20"
 ---
