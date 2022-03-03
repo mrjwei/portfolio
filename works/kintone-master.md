@@ -6,7 +6,7 @@ image: "/images/work-images/kintone-master-cover.png"
 date: "2019-02-20"
 ---
 
-![image of Sheets Master UI](/images/work-images/kintone-master.png)
+![image of Kintone Master UI](/images/work-images/kintone-master.png)
 
 This program automates a major task performed on Kintone and helped my colleague save as many as **7 hours/month**. It is another automation program I developed following Sheets Master.
 ___
@@ -42,4 +42,4 @@ ___
 
 ## Final Work
 
-![image of Sheets Master UI](/images/work-images/sheets-master.png)
+![image of Kintone Master UI](/images/work-images/kintone-master.png)
