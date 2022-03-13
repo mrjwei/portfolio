@@ -8,7 +8,7 @@ date: "2019-02-20"
 
 ![image of Kintone Master UI](/images/work-images/kintone-master.png)
 
-This program automates a major task performed on Kintone and helped my colleague save as many as **7 hours/month**. It is another automation program I developed following Sheets Master.
+This program automates a major task performed on Kintone and helped my colleague save as many as **7 hours/month**. It is another automation program I developed following [Sheets Master](/works/sheets-master).
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@ ___
 
 ## Scope Definition
 
-As another project extending the [Sheets Master](/works/sheets-master.md), I looked to automate tasks on Kintone, the main operation platform we used.
+As another project extending the [Sheets Master](/works/sheets-master), I looked to automate tasks on Kintone, the main operation platform we used.
 
 However, these tasks were different than those performed on Google Sheets in that many of them required case-by-case handling which would take much longer time to automate. My responsibility was to separate these tasks and try to automate the others first.
 
