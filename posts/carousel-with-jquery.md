@@ -9,7 +9,8 @@ You may have built carousels using [Slick](https://kenwheeler.github.io/slick/),
 
 In this tutorial, we're going to build a carousel with jQuery and you will get an idea of the mechanism of a carousel and get more familiar with some useful jQuery methods along the way.
 
-Table of Contents
+## Table of Contents
+
 - [Prerequisites](#prerequisites)
 - [Create Files](#create-files)
 - [HTML Boilerplate](#html-boilerplate)
@@ -22,6 +23,7 @@ Table of Contents
 - [Fix a Tiny Bug](#fix-a-tiny-bug)
 - [More Styles (optional)](#more-styles-optional)
 - [Conclusion & Challenges](#conclusion--challenges)
+
 ___
 
 ## Prerequisites
