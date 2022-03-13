@@ -1,15 +1,26 @@
 ---
-title: "aPaaS for the Social Welfare Domain: Full-stack Development"
+title: "EA for the Social Welfare Domain: Full-stack Development"
 tags: ["#app", "#wip"]
-description: "Omnibiz is an Enterprise Application Platform as a Service (aPaaS) designed to reduce workload and streamline workflows for social welfare companies."
+description: "Omnibiz is an Enterprise Application (EA) designed to reduce workload and streamline workflows for social welfare companies."
 image: "/images/work-images/omnibiz.png"
 date: "2022-02-25"
 ---
 
 ![image of omnibiz app design](/images/work-images/omnibiz.png)
 
-Omnibiz is an [Enterprise Application Platform as a Service (aPaaS)](https://www.gartner.com/en/information-technology/glossary/application-platform-as-a-service-apaas#:~:text=Application%20platform%20as%20a%20service%20(aPaaS)%20is%20a%20cloud%20service,deployment%20environments%20for%20application%20services.) designed for social welfare companies to streamline workflows and improve production.
-___
+Omnibiz is an [Enterprise Application (EA)](https://en.wikipedia.org/wiki/Enterprise_software) designed for social welfare companies to streamline workflows and improve production.
+
+## Table of Contents
+
+- [My Roles](#my-roles)
+- [Background](#background)
+- [Problem Identification](#problem-identification)
+  - [User Research](#user-research)
+  - [Case Studies](#case-studies)
+    - [Case 1: Kintone](#case-1-kintone)
+    - [Case 2: Knowbe](#case-2-knowbe)
+  - [Project Goal](#project-goal)
+  - [Work in Progress](#work-in-progress)
 
 ## My Roles
 
