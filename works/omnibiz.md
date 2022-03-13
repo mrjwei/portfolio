@@ -12,15 +12,15 @@ Omnibiz is an [Enterprise Application (EA)](https://en.wikipedia.org/wiki/Enterp
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [My Roles](#my-roles)
 - [Background](#background)
-- [Problem Identification](#problem-identification)
-  - [User Research](#user-research)
-  - [Case Studies](#case-studies)
-    - [Case 1: Kintone](#case-1-kintone)
-    - [Case 2: Knowbe](#case-2-knowbe)
-  - [Project Goal](#project-goal)
-  - [Work in Progress](#work-in-progress)
+- [User Research](#user-research)
+- [Case Studies](#case-studies)
+  - [Case 1: Kintone](#case-1-kintone)
+  - [Case 2: Knowbe](#case-2-knowbe)
+- [Project Goal](#project-goal)
+- [Work in Progress](#work-in-progress)
 
 ## My Roles
 
@@ -40,16 +40,12 @@ There is a universal shortage of workforce in social welfare sector facilities. 
 
 ---
 
-## Problem Identification
+## User Research
 
----
-
-### User Research
-
-I asked 12 workers in 2 welfare facilities the following questions.
+I conducted a survey with 36 employees from 7 welfare facilities. They the following questions.
 
 1. To what extend are you happy with your workload (with 1 very unhappy and 5 very happy)?
-2. For participants who answerd 1, 2, or 3, which parts of your work do you think take you too much time and effort that needed?
+2. For participants who answerd 1, 2, or 3, which parts of your work do you think take you more time and effort than needed?
 3. If you could delegate part of you tasks, what do you want to delegate most?
 
 Here are the results.
@@ -68,11 +64,13 @@ With further observations and interviews, I found some specific challenges we we
 - Documents were scattered instead of being stored in one place.
 - Doing all of these manually could lead to long-term overwork and compromise workers' health and their productivity.
 
-### Case Studies
+---
+
+## Case Studies
 
 In order to get a deeper insight on enterprise application design and development, I picked Kintone, a major enterprise application platform, and Knowbe, a management application designed exclusively for social welfare facilities.
 
-#### Case 1: Kintone
+### Case 1: Kintone
 
 ![image of a page of knowbe](/images/work-images/kintone.png)
 **pros:**
@@ -88,7 +86,7 @@ In order to get a deeper insight on enterprise application design and developmen
 - It's not ideal for storing large amounts of documents.
 - Comments cannot be editted.
 
-#### Case 2: Knowbe
+### Case 2: Knowbe
 
 ![image of a page of knowbe](/images/work-images/knowbe.png)
 **pros:**
@@ -106,26 +104,26 @@ In order to get a deeper insight on enterprise application design and developmen
 
 ---
 
-### Project Goal
+## Project Goal
 
-Base on user research results, I set the goal of the project as developing a Web application that meets the following criteria.
+Base on what I found in research, I felt it urgent to develop a web service that meets the following criteria.
 
 1. It keeps all document data in one place and data is synced across the application.
 2. It displays the most important documents in the most noticeable place and reminds users of task deadlines.
-3. It can be integrated with third-party APIs such as timecard API.
+3. It can be integrated with third-party APIs such as timecard APIs.
 4. Its functionalities and UI can be customized to fit specific needs.
-5. Its UI is clean and intuitive.
+5. It has clean and intuitive UI.
 
 ___
 
-### Work in Progress
+## Work in Progress
 
-This app is currently on the iterative protyping stage and here are some samples of the UI design.
+This app is currently on the protyping stage and here are some samples of the UI design.
 
 ![image 1 of Omnibiz app UI design](/images/work-images/omnibiz-ui-1.png)
 ![image 2 of Omnibiz app UI design](/images/work-images/omnibiz-ui-2.png)
 ![image 3 of Omnibiz app UI design](/images/work-images/omnibiz-ui-3.png)
 
-And here is the initial prototype.
+And here is the initial prototype (the brand name is fake).
 
 ![image of the first prototype of the Omnibiz app](/images/work-images/omnibiz-mockup.gif)
