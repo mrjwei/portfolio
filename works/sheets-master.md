@@ -11,7 +11,13 @@ date: "2019-02-20"
 Social welfare facilities normally have huge amounts of documents to manage and it is usually done by hand. This is not just unproductive but is unsustainable in terms of employee health. This was the reason why I developed automation programs to improve the situation.
 
 Sheets Master is a Python program that helped my colleagues save as many as **12 hours/month** that had been spent on working with Google Sheets. It has a simple UI and doing those tasks means just a couple of clicks.
-___
+
+## Table of Contents
+
+- [My Roles](#my-roles)
+- [Problem Identification](#problem-identification)
+- [Planning & Design](#planning--design)
+- [Final Work](#final-work)
 
 ## My Roles
 

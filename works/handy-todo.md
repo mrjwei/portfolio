@@ -9,7 +9,13 @@ date: "2021-01-18"
 ![handy todo app image](/images/work-images/handy-todo-presentation.png)
 
 This is a side project built upon this [MDN React tutorial](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started). In the tutorial, I learned a lot about the essentials of React and upon finishing it, I wanted to challenge myself and take this app a step further.
-___
+
+## Table of Contents
+
+- [A Step Further From a Tutorial](#a-step-further-from-a-tutorial)
+- [The branding](#the-branding)
+- [The UI](#the-ui)
+- [The Final App](#the-final-app)
 
 ## A Step Further From a Tutorial
 

@@ -9,7 +9,13 @@ date: "2019-02-20"
 ![image of Kintone Master UI](/images/work-images/kintone-master.png)
 
 This program automates a major task performed on Kintone and helped my colleague save as many as **7 hours/month**. It is another automation program I developed following Sheets Master.
-___
+
+## Table of Contents
+
+- [My Roles](#my-roles)
+- [Scope Definition](#scope-definition)
+- [Planning & Design](#planning--design)
+- [Final Work](#final-work)
 
 ## My Roles
 
