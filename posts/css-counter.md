@@ -6,15 +6,28 @@ description: "CSS counter generates automatically incrementing numbers for a gro
 ---
 CSS counter generates **automatically incrementing numbers** for a group of HTML elements. This comes in handy when you have a list of recommended books, for example, and you want to add a number to each of them based on their order in the list(like 1, 2, 3...).
 
+## Table of Contents
+
+- [A Basic Example](#a-basic-example)
+  - [Basic Example: Final Image](#basic-example-final-image)
+  - [Basic Example: The Code](#basic-example-the-code)
+- [Nested Counters](#nested-counters)
+  - [Nested Counters: Final Image](#nested-counters-final-image)
+  - [Nested Counters: HTML](#nested-counters-html)
+  - [Nested Counters: Styles](#nested-counters-styles)
+- [Tips](#tips)
+
+---
+
 ## A Basic Example
 
 Let's get our hands dirty by building a simple CSS counter.
 
-### Final Image
+### Basic Example: Final Image
 
 ![an example of a CSS counter](/images/post-images/counter.png)
 
-### The Code
+### Basic Example: The Code
 
 ![code of CSS counter example](/images/post-images/counter-code.png)
 
@@ -28,15 +41,15 @@ Code explanation:
 
 You can even use multiple counters in a page. Check the example below.
 
-### Final Image
+### Nested Counters: Final Image
 
 ![an example of nested CSS counters](/images/post-images/nested-counters.png)
 
-### HTML Code
+### Nested Counters: HTML
 
 ![HTML of CSS nested counters example](/images/post-images/nested-counters-styles.png)
 
-### Styles Code
+### Nested Counters: Styles
 
 ![styles of CSS nested counters example](/images/post-images/nested-counters-html.png)
 
