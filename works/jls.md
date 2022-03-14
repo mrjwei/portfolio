@@ -3,7 +3,7 @@ title: "JLS: Full-Stack App Development"
 tags: ["#app", "#ui/ux", "#wip"]
 description: "JLS (Japanese Language Service) provides high-quality and customized language education to people around the world. This project is initiated to create an intriguing web application that is of the same high-quality as the service and makes the service more accessible."
 image: "/images/work-images/jls-cover.png"
-date: "2022-02-03"
+date: "2022-03-14"
 ---
 
 ![JLS cover image](/images/work-images/jls-cover.png)

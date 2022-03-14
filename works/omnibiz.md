@@ -3,7 +3,7 @@ title: "EA for the Social Welfare Domain: Full-stack Development"
 tags: ["#app", "#wip"]
 description: "Omnibiz is an Enterprise Application (EA) designed to reduce workload and streamline workflows for social welfare companies."
 image: "/images/work-images/omnibiz.png"
-date: "2022-02-25"
+date: "2022-03-14"
 ---
 
 ![image of omnibiz app design](/images/work-images/omnibiz.png)

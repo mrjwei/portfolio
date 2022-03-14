@@ -3,7 +3,7 @@ title: "Kintone Master: A Python Program That Automates Kintone Tasks"
 tags: ["#python", "#productivity"]
 description: "This program automates a major task performed on Kintone and helped my colleague save as many as 7 hours/month. It is another automation program I developed following Sheets Master."
 image: "/images/work-images/kintone-master-cover.png"
-date: "2019-02-20"
+date: "2019-04-08"
 ---
 
 ![image of Kintone Master UI](/images/work-images/kintone-master.png)
@@ -12,6 +12,7 @@ This program automates a major task performed on Kintone and helped my colleague
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [My Roles](#my-roles)
 - [Scope Definition](#scope-definition)
 - [Planning & Design](#planning--design)
