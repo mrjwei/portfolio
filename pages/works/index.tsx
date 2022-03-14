@@ -34,7 +34,13 @@ const Works =  ({worksData}: Props) => {
 
   const [filterValue, setFilterValue] = useState(FILTERVALUES.ALL)
   const [numOfPages, setNumOfPages] = useState(initialNumOfPages)
-  const [currentPage, setCurrentPage] = useState(router.query.page ? Number(router.query.page) : 1)
+  const [currentPage, setCurrentPage] = useState<number | null>(null)
+
+  useEffect(() => {
+    if(router.isReady) {
+      setCurrentPage(router.query.page ? Number(router.query.page) : 1)
+    }
+  }, [router.isReady])
 
   useEffect(() => {
     const numOfWorks = filterValue === "#all" ? worksData.length : worksData.filter(workData => workData.tags.includes(filterValue)).length
@@ -44,6 +50,10 @@ const Works =  ({worksData}: Props) => {
     setNumOfPages(newNumOfPages)
   }, [filterValue])
 
+  if (!currentPage) {
+    return <div>loading...</div>
+  }
+
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const target = event.target as HTMLButtonElement
     const value = target.value
@@ -51,9 +61,11 @@ const Works =  ({worksData}: Props) => {
   }
 
   const handleMovePrev = () => {
+    if (!currentPage) return
+
     if (currentPage === 1) {
       setCurrentPage(1)
-      router.push("/works/?page=1", undefined, {shallow: true})
+      router.push("/works", undefined, {shallow: true})
     } else {
       setCurrentPage(currentPage - 1)
       router.push(`/works/?page=${currentPage - 1}`, undefined, {shallow: true})
@@ -61,6 +73,8 @@ const Works =  ({worksData}: Props) => {
   }
 
   const handleMoveNext = () => {
+    if (!currentPage) return
+
     if (currentPage === numOfPages) {
       setCurrentPage(numOfPages)
       router.push(`/works/?page=${numOfPages}`, undefined, {shallow: true})

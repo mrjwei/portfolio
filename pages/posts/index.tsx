@@ -35,7 +35,15 @@ const Posts =  ({postsData}: Props) => {
 
   const [filterValue, setFilterValue] = useState(FILTERVALUES.ALL)
   const [numOfPages, setNumOfPages] = useState(initialNumOfPages)
-  const [currentPage, setCurrentPage] = useState(router.query.page ? Number(router.query.page) : 1)
+  const [currentPage, setCurrentPage] = useState<number | null>(null)
+
+  console.log("currentPage: ", currentPage)
+
+  useEffect(() => {
+    if(router.isReady) {
+      setCurrentPage(router.query.page ? Number(router.query.page) : 1)
+    }
+  }, [router.isReady])
 
   useEffect(() => {
     const numOfPosts = filterValue === "#all" ? postsData.length : postsData.filter(postData => postData.tags.includes(filterValue)).length
@@ -44,6 +52,10 @@ const Posts =  ({postsData}: Props) => {
 
     setNumOfPages(newNumOfPages)
   }, [filterValue])
+
+  if (!currentPage) {
+    return <div>loading...</div>
+  }
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const target = event.target as HTMLButtonElement
