@@ -25,7 +25,19 @@ export const getEntriesData = (dirName: string) => {
       ...frontMatter.data
     }
   })
-  return entriesData
+  return entriesData.sort(({date: a}: any, {date: b}: any) => {
+    if (!a) {
+      return 0
+    } else {
+      if (a < b) {
+        return 1
+      } else if (a > b) {
+        return -1
+      } else {
+        return 0
+      }
+    }
+  })
 }
 
 export const getEntryIds = (dirName: string) => {
