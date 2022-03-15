@@ -7,6 +7,14 @@ description: "React has no built-in support for tracking previous state. However
 
 React has no built-in support for tracking previous state. However, by creating a custom hook using useRef, we can achieve that. Let's look at an example and think about how it works.
 
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [An Official Example](#an-official-example)
+- [How It Works](#how-it-works)
+
+---
+
 ## An Official Example
 
 The official site of Reactjs shows [an example of creating and using a `usePrevious` custom hook](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state) to track previous state.

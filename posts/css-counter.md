@@ -8,6 +8,7 @@ CSS counter generates **automatically incrementing numbers** for a group of HTML
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [A Basic Example](#a-basic-example)
   - [Basic Example: Final Image](#basic-example-final-image)
   - [Basic Example: The Code](#basic-example-the-code)

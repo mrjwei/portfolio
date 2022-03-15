@@ -1,6 +1,6 @@
 ---
 title: "Clipy: Make Your Copy-And-Paste 10 Times More Efficient"
-date: "2021-07-12"
+date: "2021-12-26"
 tags: ["#tips&tricks"]
 description: "Clipy is a clipboard extension for MacOS. It supports text and multiple media formats, stores copy history for reuse and is highly customizable. If you want to work more efficiently, then this is a tool that you cannot miss."
 ---
@@ -9,6 +9,7 @@ Clipy is a clipboard extension for MacOS. It supports text and multiple media fo
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Get Started](#get-started)
   - [Requirement](#requirement)
   - [Install](#install)
@@ -16,6 +17,8 @@ Clipy is a clipboard extension for MacOS. It supports text and multiple media fo
 - [Advanced Usage](#advanced-usage)
   - [Configuration](#configuration)
   - [Add Custom Snippets](#add-custom-snippets)
+
+---
 
 ## Get Started
 

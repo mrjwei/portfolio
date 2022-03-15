@@ -19,6 +19,8 @@ date: "2022-03-14"
 - [The UI](#the-ui)
 - [Work in Progress](#work-in-progress)
 
+---
+
 ## My Role
 
 - Contextualization & Research

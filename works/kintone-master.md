@@ -18,6 +18,8 @@ This program automates a major task performed on Kintone and helped my colleague
 - [Planning & Design](#planning--design)
 - [Final Work](#final-work)
 
+---
+
 ## My Roles
 
 - Scope definition.

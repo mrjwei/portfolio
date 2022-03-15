@@ -12,10 +12,13 @@ This is a side project built upon this [MDN React tutorial](https://developer.mo
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [A Step Further From a Tutorial](#a-step-further-from-a-tutorial)
 - [The branding](#the-branding)
 - [The UI](#the-ui)
 - [The Final App](#the-final-app)
+
+---
 
 ## A Step Further From a Tutorial
 

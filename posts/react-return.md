@@ -8,6 +8,7 @@ React complains **"'SomeComponent' cannot be used as a JSX component"** and your
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [An Example](#an-example)
 - [The Fix](#the-fix)
 - [Best Practice](#best-practice)

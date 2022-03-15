@@ -14,6 +14,7 @@ Sheets Master is a Python program that helped my colleagues save as many as **19
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [My Roles](#my-roles)
 - [User Research](#user-research)
   - [Observation](#observation)
@@ -24,6 +25,8 @@ Sheets Master is a Python program that helped my colleagues save as many as **19
   - [Before](#before)
   - [After](#after)
   - [Productivity Boost](#productivity-boost)
+
+---
 
 ## My Roles
 

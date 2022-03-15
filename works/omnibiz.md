@@ -22,6 +22,8 @@ Omnibiz is an [Enterprise Application (EA)](https://en.wikipedia.org/wiki/Enterp
 - [Project Goal](#project-goal)
 - [Work in Progress](#work-in-progress)
 
+---
+
 ## My Roles
 
 - Problem identification and goal setting.

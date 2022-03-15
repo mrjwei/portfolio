@@ -11,6 +11,7 @@ In this tutorial, we're going to build a carousel with jQuery and you will get a
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Prerequisites](#prerequisites)
 - [Create Files](#create-files)
 - [HTML Boilerplate](#html-boilerplate)

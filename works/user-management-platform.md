@@ -18,6 +18,8 @@ This is a user management platform developed for Tryze Odori, the social welfare
 - [Planning & Design](#planning--design)
 - [The Final App](#the-final-app)
 
+---
+
 ## My Roles
 
 - Problem identification
