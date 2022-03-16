@@ -14,6 +14,7 @@ This is a user management platform developed for Tryze Odori, the social welfare
 
 - [Table of Contents](#table-of-contents)
 - [My Roles](#my-roles)
+- [Technologies & Tools](#technologies--tools)
 - [Problem Identification](#problem-identification)
 - [Planning & Design](#planning--design)
 - [The Final App](#the-final-app)
@@ -25,6 +26,12 @@ This is a user management platform developed for Tryze Odori, the social welfare
 - Problem identification
 - Planning & Design
 - Coding & Deploying
+
+## Technologies & Tools
+
+- Adobe XD
+- Django
+- AWS S3
 
 ___
 
