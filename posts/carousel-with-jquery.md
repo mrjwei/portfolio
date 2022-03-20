@@ -93,7 +93,7 @@ ___
 First, we need to link our `style.css` file. Add the following code to `index.html`, under `<title>`.
 
 ```html
-<title>Slider with jQuery</title>
+<title>Carousel with jQuery</title>
 <!-- add this line -->
 <link rel="stylesheet" href="./style.css">
 ```
@@ -111,7 +111,6 @@ Add the following line above `<title>`.
   ...
   <!-- add this line to reference jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <title>Slider with jQuery</title>
 </head>
 ```
 
@@ -122,7 +121,6 @@ Then add our custom `script.js` file to `<head>` below the jQuery script tags.
 ```html
 <head>
   ...
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- add this line -->
   <script src="./script.js"></script>
   ...
@@ -186,7 +184,7 @@ $(function() {
   var $currentItem = $items.eq(currentIndex)
 
   // display the the first carousel item
-  when window loads for the first time
+  // when window loads for the first time
   $currentItem.css("left", 0)
 
   // as we'll need to get prev index at multiple places,
@@ -293,9 +291,11 @@ ___
 
 ## More Styles (optional)
 
-Finally, we'll add more styles to make the carousel look really cool and profesional. As we'll make many changes, it takes some time. So feel free to skip this section if you don't care stying too much at this time or you know how to do it yourself.
+Finally, we'll add more styles to make the carousel look really cool and profesional. It will take some time, so feel free to skip this section if you don't care stying too much at this time or you know how to do it yourself.
 
-First, we need to make some changes to `index.html`. Replace the current `body` with the following.
+Let's start by creating a new directory called `images` at the root of our project. Go to [undraw](https://undraw.co/), a free service with tons of high-quality illustrations, find a couple of cool illustrations you like and download it to the `images` directory we created just now to use as carousel images.
+
+Then, we need to make some changes to `index.html`. Replace the current `body` with the following.
 
 ```html
 <body>
@@ -303,23 +303,23 @@ First, we need to make some changes to `index.html`. Replace the current `body` 
     <ul class="carousel">
       <li class="carousel-item">
         <h2 class="carousel-title">Detailed User Research to Empathize</h2>
-        <img class="carousel-img" src="./undraw_user_flow_re_bvfx.svg" alt="carousel image 1">
+        <img class="carousel-img" src="./images/undraw_user_flow_re_bvfx.svg" alt="carousel image 1">
       </li>
       <li class="carousel-item">
         <h2 class="carousel-title">Iterative Design For the Best Idea</h2>
-        <img class="carousel-img" src="./undraw_design_process_re_0dhf.svg" alt="carousel image 2">
+        <img class="carousel-img" src="./images/undraw_design_process_re_0dhf.svg" alt="carousel image 2">
       </li>
       <li class="carousel-item">
         <h2 class="carousel-title">Experienced Team You Can Trust</h2>
-        <img class="carousel-img" src="./undraw_designer_life_re_6ywf.svg" alt="carousel image 3">
+        <img class="carousel-img" src="./images/undraw_designer_life_re_6ywf.svg" alt="carousel image 3">
       </li>
       <li class="carousel-item">
         <h2 class="carousel-title">User Experience Is Our NO.1 Priority</h2>
-        <img class="carousel-img" src="./undraw_experience_design_eq-3-j.svg" alt="carousel image 4">
+        <img class="carousel-img" src="./images/undraw_experience_design_eq-3-j.svg" alt="carousel image 4">
       </li>
       <li class="carousel-item">
         <h2 class="carousel-title">Every Solution Follows the Best Design Practics</h2>
-        <img class="carousel-img" src="./undraw_modern_design_v-3-wv.svg" alt="carousel image 5">
+        <img class="carousel-img" src="./images/undraw_modern_design_v-3-wv.svg" alt="carousel image 5">
       </li>
     </ul>
     <ul class="indicator-wrapper">
@@ -466,32 +466,22 @@ $(function() {
 })
 ```
 
-After indicators are generated, when need to add code to update the status of each indicator when carousel items move. At the bottom of `script.js`, just above the outmost closing `}`.
+After indicators are generated, when need to update the status of each indicator when carousel items move.
 
 ```javascript
 $(function() {
-  ...
-  $indicators.each(function(index) {
-    $(this).click(function() {
-      clearInterval(interval)
-      if (index > currentIndex) {
-        moveCarousel()
-      } else if (index < currentIndex) {
-        moveCarousel(direction = "reverse")
-      } else {
-        return
-      }
-      interval = setInterval(function() {
-        moveCarousel()
-      }, 2000)
-    })
-  })
+  function moveCarousel(direction = "normal") {
+    ...
+    // add these 2 lines to update the status of each indicator when carousel items move
+    $indicators.removeClass("active")
+    $indicators.eq(nextIndex).addClass("active")
+
+    currentIndex = nextIndex
+  }
 })
 ```
 
-Finally, go to [undraw](https://undraw.co/), find a couple of cool illustrations you like and download it to your working directory to use as carousel images.
-
-Your final carousel should look like this one.
+Your final carousel should look like this.
 
 ![carousel](/images/post-images/carousel.gif)
 
@@ -499,11 +489,11 @@ ___
 
 ## Conclusion & Challenges
 
-Well done! You've just built a fully functioinal carousel with jQuery! You can now use it in your own projects. If you have any questions about this tutorial, feel free to contact me from [here](/contact).
+Well done! You've just built a cool, professional-level carousel with jQuery! You can now use it in your own projects. If you have any questions about this tutorial, feel free to contact me from [here](/contact).
 
 If you want to challenge yourself and take what we've built further, you can try the following.
 
-- Currently, when we click the prev or next button while carousel items are being animated, the current item and the next/previous one collides. This is not ideal in terms of user experience. Try to solve this.
-- Currently, clicking the indicators does not trigger the carousel to move. Try and make it work as expected.
+- Currently, when we click the prev or next button while carousel items are being animated, **the current item and the next/previous one race**. This is a bug and try and see if you can solve this.
+- Currently, **clicking the indicators does not trigger the carousel to move**. Try and make it work as expected.
 
-If you need help, ask Google. Good luck!
+Good luck!
