@@ -10,12 +10,13 @@ CSS counter generates **automatically incrementing numbers** for a group of HTML
 
 - [Table of Contents](#table-of-contents)
 - [A Basic Example](#a-basic-example)
-  - [Basic Example: Final Image](#basic-example-final-image)
-  - [Basic Example: The Code](#basic-example-the-code)
+  - [Final Image](#final-image)
+  - [HTML](#html)
+  - [Styles](#styles)
 - [Nested Counters](#nested-counters)
-  - [Nested Counters: Final Image](#nested-counters-final-image)
-  - [Nested Counters: HTML](#nested-counters-html)
-  - [Nested Counters: Styles](#nested-counters-styles)
+  - [Final Image](#final-image-1)
+  - [HTML](#html-1)
+  - [Styles](#styles-1)
 - [Tips](#tips)
 
 ---
@@ -24,43 +25,190 @@ CSS counter generates **automatically incrementing numbers** for a group of HTML
 
 Let's get our hands dirty by building a simple CSS counter.
 
-### Basic Example: Final Image
+### Final Image
 
 ![an example of a CSS counter](/images/post-images/counter.png)
 
-### Basic Example: The Code
+### HTML
 
-![code of CSS counter example](/images/post-images/counter-code.png)
+```html
+<body>
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+```
 
-Code explanation:
+### Styles
+
+```css
+.container {
+  width: 60%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+  /* 1 */
+  counter-reset: basic-example;
+}
+.container div {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 50px;
+  background-color: lightblue;
+  color: coral;
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  /* 2 */
+  counter-increment: basic-example;
+}
+.container div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50px;
+  top: -50px;
+  left: -50px;
+}
+.container div::after {
+  /* 3 */
+  content: "0"counter(basic-example);
+  display: block;
+  position: absolute;
+  top: -35px;
+  left: -35px;
+}
+```
+
+Explanation of the code above:
 
 1. Here we create a new counter by passing a counter name to `counter-reset` property.
 2. We then pass the new counter name to `counter-increment` to increment counter value by 1 based on the order `.el` elements are stacked.
 3. Finally we display the generated numbers on the `.el` elements.
 
+---
+
 ## Nested Counters
 
 You can even use multiple counters in a page. Check the example below.
 
-### Nested Counters: Final Image
+### Final Image
 
 ![an example of nested CSS counters](/images/post-images/nested-counters.png)
 
-### Nested Counters: HTML
+### HTML
 
-![HTML of CSS nested counters example](/images/post-images/nested-counters-styles.png)
+```html
+<body>
+  <div class="container">
+    <ul class="recipes">
+      <li>
+        Veggie Burger
+        <ul class="ingredients">
+          <li>Hamburger buns</li>
+          <li>Tomatoes</li>
+          <li>Nuts</li>
+          <li>Vegan sauces</li>
+        </ul>
+      </li>
+      <li>
+        Carbonara
+        <ul class="ingredients">
+          <li>Spaghetti</li>
+          <li>Pancetta</li>
+          <li>Cheese</li>
+          <li>Eggs</li>
+          <li>Black pepper</li>
+        </ul>
+      </li>
+      <li>
+        Peking Duck
+        <ul class="ingredients">
+          <li>Duck</li>
+          <li>Green onions</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+```
 
-### Nested Counters: Styles
+### Styles
 
-![styles of CSS nested counters example](/images/post-images/nested-counters-html.png)
+```css
+ul {
+  list-style: none;
+  line-height: 30px;
+}
+.container {
+  width: 60%;
+  max-width: 600px;
+  padding-top: 50px;
+  /* 1 */
+  counter-reset: recipe ingredient;
+}
+.recipes li {
+  /* 2 */
+  counter-increment: recipe;
+  position: relative;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+.recipes li::after {
+  /* 3 */
+  content: counter(recipe);
+  color: white;
+  background-color: red;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: -50px;
+}
+.ingredients {
+  margin-top: 10px;
+}
+.ingredients li {
+  /* 4 */
+  counter-increment: ingredient;
+  position: relative;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.ingredients li::after {
+  /* 5 */
+  content: counter(ingredient);
+  color: green;
+  border: 2px solid green;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -50px;
+}
+```
 
-Code explanation:
+Explanation of the code above:
 
 1. Here we create 2 counters: `recipe` and `ingredient`.
 2. We increment the `recipe` counter value by 1 as the traverse the recipe elements.
 3. We display the `recipe` counter value on recipe elements as first level list.
 4. We increment the `ingredient` counter value by 1 as the traverse the ingredient elements.
 5. We display the `ingredient` counter value on ingredient elements as second level list.
+
+---
 
 ## Tips
 
