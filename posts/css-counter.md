@@ -9,6 +9,7 @@ CSS counter generates **automatically incrementing numbers** for a group of HTML
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [How to Get the Most Out of This Tutorial](#how-to-get-the-most-out-of-this-tutorial)
 - [A Basic Example](#a-basic-example)
   - [Final Image](#final-image)
   - [HTML](#html)
@@ -20,6 +21,13 @@ CSS counter generates **automatically incrementing numbers** for a group of HTML
 - [Tips](#tips)
 
 ---
+
+## How to Get the Most Out of This Tutorial
+
+The complete code of this tutorial can be found at [the repo](https://github.com/mrjwei/css-counters).
+There are 2 tags, `basic-example` and `advanced-example`, corresponding to the 2 examples respectively that we will see in the tutorial.
+
+Feel free to skip between these tags and check to see if your code matches the final code of the specific example.
 
 ## A Basic Example
 

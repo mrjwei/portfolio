@@ -12,7 +12,9 @@ In this tutorial, we're going to build a carousel with jQuery and you will get a
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Prerequisites](#prerequisites)
+- [How to Get the Most Out of This Tutorial](#how-to-get-the-most-out-of-this-tutorial)
+  - [The Code](#the-code)
+  - [Prerequisites](#prerequisites)
 - [Create Files](#create-files)
 - [HTML Boilerplate](#html-boilerplate)
 - [Reference Style & JS Files](#reference-style--js-files)
@@ -27,7 +29,18 @@ In this tutorial, we're going to build a carousel with jQuery and you will get a
 
 ___
 
-## Prerequisites
+## How to Get the Most Out of This Tutorial
+
+### The Code
+
+The complete code of this tutorial can be found at [the repo](https://github.com/mrjwei/jquery-carousel-tutorial).
+To allow for more flexibility, I added 3 tags, `start-point`, `make-carousel-move` and `final-code`, to the repo and each marks a key point along the journey.
+
+- `start-point`. This is the very beginning of the project and it's recommended that you start from here.
+- `make-carousel-move`. This marks the point before the **More Styles** section. If you feel you can implement the core functionalities of a carousel and just want to take a look at how to style it, you can jump right into this tag.
+- `final-code`. This is the complete code of the tutorial. Feel free to reference it along the way, but don't *cheat*. You should ry to make the code work by yourself before referencing the final code.
+
+### Prerequisites
 
 I will be using MacOS. For Windows and Linux users, you will need to reference other resources to complete some of the steps.
 
@@ -38,6 +51,7 @@ This tutorial assumes the following.
 - You are familiar with terminal.
 
 That's all and let's get started!
+
 ___
 
 ## Create Files
