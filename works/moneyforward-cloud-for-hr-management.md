@@ -8,7 +8,7 @@ date: "2021-12-03"
 
 ![image of one of moneyforward cloud products, the hr management app](/images/work-images/moneyforward-cloud-hr.png)
 
-Money Forward,Inc. is one of the dominant player in the cloud accounting market in Japan. I joined their HR Management product team in July 2021 and worked on the development of the [app](https://biz.moneyforward.com/employee/). (Due to privacy policies, I cannot share details about the codebase and core implementations of the product).
+Money Forward,Inc. is one of the dominant player in the cloud accounting market in Japan. I joined their HR Management product team in July 2021 and worked on the development of the [app](https://biz.moneyforward.com/employee/). (To comply with my non-disclosure agreement, I omitted and obfuscated confidential information. All of the views and opinions in this post are my own and does not necessarily reflect those of Money Forward,Inc.).
 
 ## Table of Contents
 
