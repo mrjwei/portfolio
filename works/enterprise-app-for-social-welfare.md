@@ -8,14 +8,15 @@ date: "2022-03-14"
 
 ![image of omnibiz app design](/images/work-images/omnibiz.png)
 
-Omnibiz is an [Enterprise Application (EA)](https://en.wikipedia.org/wiki/Enterprise_software) designed for social welfare companies to streamline workflows and improve production.
+This is an [Enterprise Application (EA)](https://en.wikipedia.org/wiki/Enterprise_software) designed specifically for social welfare companies to streamline workflows and improve production. (To comply with my non-disclosure agreement, I omitted and obfuscated confidential information. All of the views and opinions in this post are my own and does not necessarily reflect those of Yokazu,Inc.).
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [My Roles](#my-roles)
-- [Background](#background)
+- [Context](#context)
 - [User Research](#user-research)
+  - [Survey](#survey)
 - [Case Studies](#case-studies)
   - [Case 1: Kintone](#case-1-kintone)
   - [Case 2: Knowbe](#case-2-knowbe)
@@ -34,19 +35,23 @@ Omnibiz is an [Enterprise Application (EA)](https://en.wikipedia.org/wiki/Enterp
 
 ___
 
-## Background
+## Context
 
 According to [National Institute of Population and Social Security Research (2019)](https://www.ipss.go.jp/s-info/e/pssj/pssj2019.pdf), the proportion of population aged 65 years and over was 27.6% in 2017, the highest in the world. And apart from an aging population, there were over 6 million people in Japan certified for long-term care in 2016 and many more receiving supports from other social security schemes. *National Institute of Population and Social Security Research* also revealed that in 2016, the spend of social benefit exceeded 116 trillion JPY.
 
-There is a universal shortage of workforce in social welfare sector facilities. When I was working in a social welfare facility, there were only 5 full-time employees who served over 20 service users a day and managed all of their documents manually. It was not only unproductive but could significantly affect workers' health and service quality as well.
+One of the direct consequences of an aging population is the universal shortage of workforce. This is especially true in the social welfare industry. When I was working in a social welfare facility, there were only 5 full-time employees who served over 20 service users a day and managed all of their documents manually. It was not only unproductive but could significantly affect workers' health and service quality as well.
 
 ---
 
 ## User Research
 
-I conducted a survey with 36 employees from 7 welfare facilities. They the following questions.
+My user research was conducted across 7 welfare facilities which provide different services. Due to
 
-1. To what extend are you happy with your workload (with 1 very unhappy and 5 very happy)?
+### Survey
+
+I conducted a survey with 36 employees from 7 welfare facilities and asked them the following questions.
+
+1. To what extend are you happy with your workload (with 1 being very unhappy and 5 being very happy)?
 2. For participants who answerd 1, 2, or 3, which parts of your work do you think take you more time and effort than needed?
 3. If you could delegate part of you tasks, what do you want to delegate most?
 
