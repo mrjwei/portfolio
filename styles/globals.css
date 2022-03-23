@@ -89,4 +89,7 @@
   .prose :where(code):not(:where([class~="not-prose"] *)) {
     @apply bg-[#f3f3f3] p-1;
   }
+  .prose img + em {
+    @apply block text-center text-gray-400;
+  }
 }

@@ -18,7 +18,7 @@ export const Article = ({entry, prevData, nextData}: Props) => {
         <h1 className="text-3xl lg:text-5xl mb-3">{title}</h1>
         <Tags tags={tags} isLink={true} fontSize="text-lg" />
         <div className='mt-6 mb-12' dangerouslySetInnerHTML={{
-          __html: `<div class="prose prose-a:text-red-300 prose-h2:text-3xl prose-h2:mb-8 prose-h3:text-2xl prose-h3:mb-6 prose-h4:text-xl prose-h4:underline prose-h4:mb-6 prose-pre:bg-transparent prose-pre:p-0 prose-">${content}</div>`
+          __html: `<div class="prose prose-a:text-red-300 prose-h2:text-3xl prose-h2:mb-8 prose-h3:text-2xl prose-h3:mb-6 prose-h4:text-xl prose-h4:italic prose-h4:mb-6 prose-pre:bg-transparent prose-pre:p-0 prose-">${content}</div>`
         }} />
       </div>
       <div className='w-full lg:flex lg:justify-between'>
@@ -60,7 +60,7 @@ export const Article = ({entry, prevData, nextData}: Props) => {
         <h1 className="text-3xl lg:text-5xl mb-3">{title}</h1>
         <Tags tags={tags} isLink={true} fontSize="text-lg" />
         <div className='mt-12 mb-24' dangerouslySetInnerHTML={{
-          __html: `<div class="prose prose-a:text-red-300 prose-h2:text-3xl prose-h2:mb-8 prose-h3:text-2xl prose-h3:mb-6 prose-h4:text-xl prose-h4:underline prose-h4:mb-6 prose-pre:bg-transparent prose-pre:p-0 prose-">${content}</div>`
+          __html: `<div class="prose prose-a:text-red-300 prose-h2:text-3xl prose-h2:mb-8 prose-h3:text-2xl prose-h3:mb-6 prose-h4:text-xl prose-h4:italic prose-h4:mb-6 prose-pre:bg-transparent prose-pre:p-0 prose-">${content}</div>`
         }} />
       </div>
       <div className='w-full lg:flex lg:justify-between'>
