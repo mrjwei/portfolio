@@ -142,7 +142,7 @@ const Posts =  ({postsData}: Props) => {
             })}
           </div>
           {filterValue === "#all" ? (
-            <div className='my-24 md:grid md:grid-cols-2 md:gap-12 md:justify-items-stretch lg:grid-cols-3 lg:gap-x-24 lg:gap-y-20'>
+            <div className='my-24 md:grid md:grid-cols-2 md:gap-12 md:justify-items-stretch lg:grid-cols-3 lg:gap-16'>
               {postsData.slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((postData, index) => {
                 return (
                   <div key={index} className='mb-8 drop-shadow-card md:mb-0'>
@@ -156,7 +156,7 @@ const Posts =  ({postsData}: Props) => {
               })}
             </div>
           ) : (
-            <div className='my-24 md:grid md:grid-cols-2 md:gap-12 md:justify-items-stretch lg:grid-cols-3 lg:gap-x-24 lg:gap-y-20'>
+            <div className='my-24 md:grid md:grid-cols-2 md:gap-12 md:justify-items-stretch lg:grid-cols-3 lg:gap-16'>
               {postsData.filter(postData => postData.tags.includes(filterValue)).slice(ITEMPERPAGE * (currentPage - 1), ITEMPERPAGE * currentPage).map((postData, index) => {
                 return (
                   <div key={index} className='mb-8 drop-shadow-card md:mb-0'>

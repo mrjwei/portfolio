@@ -32,7 +32,7 @@ const Work =  ({work, allWorksData, allWorkIds}: Props) => {
         <link rel="icon" href="/images/global-images/favicon.png" />
       </Head>
       <Header mode="light" />
-      <div className='container py-20 lg:py-36 lg:grid lg:grid-cols-3 lg:gap-16'>
+      <div className='container py-20 lg:py-36 lg:grid lg:grid-cols-7 lg:gap-12'>
         <Article
           entry={work}
           prevData={prevWorkData}

@@ -13,7 +13,7 @@ export const Article = ({entry, prevData, nextData}: Props) => {
   const {title, tags, content} = entry
 
   return "image" in entry ? (
-    <article className='bg-white p-8 lg:p-20 rounded-md lg:col-span-2'>
+    <article className='bg-white p-8 lg:p-20 rounded-md lg:col-span-5'>
       <div>
         <h1 className="text-3xl lg:text-5xl mb-3">{title}</h1>
         <Tags tags={tags} isLink={true} fontSize="text-lg" />
@@ -54,7 +54,7 @@ export const Article = ({entry, prevData, nextData}: Props) => {
       </div>
     </article>
   ) : (
-    <article className='bg-white p-8 lg:p-20 rounded-md lg:col-span-2'>
+    <article className='bg-white p-8 lg:p-20 rounded-md lg:col-span-5'>
       <div>
         <time className='block mb-6 text-gray-400'>{entry.date}</time>
         <h1 className="text-3xl lg:text-5xl mb-3">{title}</h1>

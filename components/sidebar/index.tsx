@@ -7,7 +7,7 @@ type Props = {
 
 export const Sidebar = ({entries}: Props) => {
   return (
-    <div className='hidden lg:block'>
+    <div className='hidden lg:block lg:col-span-2'>
       <h2 className='text-xl mb-8'>You may also like</h2>
       <ul>
         {entries.map((entry) => {
