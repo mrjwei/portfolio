@@ -80,6 +80,13 @@
   img[src$="#float"]:last-child::after {
     clear: both;
   }
+  img[src$="#float-custom-height"] {
+    height: 190px;
+    float: left;
+  }
+  img[src$="#float-custom-height"]:last-child::after {
+    clear: both;
+  }
   .prose :where(code):not(:where([class~="not-prose"] *))::before {
     content: none;
   }
@@ -91,5 +98,8 @@
   }
   .prose img + em {
     @apply block text-center text-gray-400;
+  }
+  .prose > :where(:first-child):not(:where([class~="not-prose"] *)) + p + p {
+    @apply text-gray-400;
   }
 }
