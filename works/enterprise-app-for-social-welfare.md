@@ -54,7 +54,7 @@ The implication is that **a fundamental revolution of the existing operation mod
 
 ## The Pandemic: Crisis and Opportunity
 
-> Facilities, including the one I was working for, struggled to adapt to the new normal, largely due to **the lack of technological resources** to support the shift.
+> Service users now had to train at home and how could we possibly manage everything considering we did not even have an established workflow to do the managing?
 
 Having worked in the industry for 3 years, I experienced the problems myself and had made great effort to alleviate the situation by developing multiple task automation programs for internal use.
 
@@ -76,7 +76,7 @@ So we wanted to develop a product that could help social welfare facilities beco
 
 [Kintone](https://kintone.cybozu.co.jp/) is a cloud groupware that is designed particularly for small- to middle-scale companies to manage their daily operations. It's functionally powerful and can serve companies of any industy.
 
-The features of kintone include:/
+The features of kintone include:
 
 - Well-organized contents and one-click to add apps.
 
@@ -156,7 +156,7 @@ The team initially consisted of a designer and developer (me), 3 staff members a
 In order to help everyone get onboard quickly,
 
 - I separated materials that contained information relevant to the project from those that did not. This way, I reduced noise and important information got communicated more efficiently.
-- Research have shown that visual medium facilitates more effective communication ([Dewan, P. (2015). Words Versus Pictures: Leveraging the Research on Visual Communication.](chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://journal.lib.uoguelph.ca/index.php/perj/article/download/3137/3473/0)). So I made full use of visual graphics at meetings and discussions. For example, I created and brought UI clean wireframes that communicated key features to the first meeting with the external developers. This helped them capture the big picture and they showed us the first prototype in just 4 weeks!
+- Research have shown that visual medium facilitates more effective communication ([Dewan, P. (2015). Words Versus Pictures: Leveraging the Research on Visual Communication.](chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://journal.lib.uoguelph.ca/index.php/perj/article/download/3137/3473/0)). So I made full use of visual graphics at meetings and discussions. For example, I brought carefully created UI wireframes that communicated key features to the first meeting with the external developers. This helped them capture the big picture and they showed us the first prototype in just 4 weeks!
 
 ## Work in Progress
 
