@@ -76,19 +76,19 @@ So we wanted to develop a product that could help social welfare facilities beco
 
 [Kintone](https://kintone.cybozu.co.jp/) is a cloud groupware that is designed particularly for small- to middle-scale companies to manage their daily operations. It's functionally powerful and can serve companies of any industy.
 
-The features of kintone include:
+The features of kintone include:/
 
 - Well-organized contents and one-click to add apps.
 
-![image of kintone: 1](images/work-images/omnibiz-social-welfare-facilities-case-study-kintone-1.png)
+![image of kintone: 1](/images/work-images/omnibiz-social-welfare-facilities-case-study-kintone-1.png)
 
 - A large number of pre-built apps that are ready to use.
 
-![image of kintone: 2](images/work-images/omnibiz-social-welfare-facilities-case-study-kintone-2.png)
+![image of kintone: 2](/images/work-images/omnibiz-social-welfare-facilities-case-study-kintone-2.png)
 
 - Advanced customization is supported via kintone API.
 
-![image of kintone: 3](images/work-images/omnibiz-social-welfare-facilities-case-study-kintone-3.png)
+![image of kintone: 3](/images/work-images/omnibiz-social-welfare-facilities-case-study-kintone-3.png)
 
 One of the downsides, however, is that as a general-purpose application, its targets are a bit *too general* and it struggles to meet specific needs in a certain industry. This left us with only one choice if we decided to go with kintone: extending it via its API.
 
@@ -104,15 +104,15 @@ However, we dropped the option for three reasons.
 
 - Detailed records of users.
 
-![image of knowbe: 1](images/work-images/omnibiz-social-welfare-facilities-case-study-knowbe-1.png)
+![image of knowbe: 1](/images/work-images/omnibiz-social-welfare-facilities-case-study-knowbe-1.png)
 
 - Automatic document generation.
 
-![image of knowbe: 2](images/work-images/omnibiz-social-welfare-facilities-case-study-knowbe-2.png)
+![image of knowbe: 2](/images/work-images/omnibiz-social-welfare-facilities-case-study-knowbe-2.png)
 
 - User management.
 
-![image of knowbe: 3](images/work-images/omnibiz-social-welfare-facilities-case-study-knowbe-3.png)
+![image of knowbe: 3](/images/work-images/omnibiz-social-welfare-facilities-case-study-knowbe-3.png)
 
 However, the documents and data it handles are not exhaustive enough to make it truly useful for various types of social welfare facilities. It also has no support for managing facility- and employee-related data. And its zero customizability or extensibility means it's unlikely for us to sell an extended version.
 
