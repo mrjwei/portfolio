@@ -84,7 +84,7 @@ Clicking the `p` element logs the following.
 When you try to figure out why this result is logged, take these steps.
 
 1. Decide the `target` of the clicking event.
-2. Realize that events bubble.
+2. Realize that events [bubble](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture).
 
 The `target` of the clicking event here is the `p` element (the element that triggered the event), which explains the `<p>P</p>`s. And events, by default, bubble. Bubbling means upper elements (`div` and `form` here), which have a click event handler, will also invoke their handler functions. This explains why there are three lines of logs.
 
