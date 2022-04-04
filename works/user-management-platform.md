@@ -10,6 +10,8 @@ date: "2020-05-30"
 
 This is a user management platform developed for Tryze Odori, the social welfare facility I worked for. The goal was to create a secure while accessible and user-friendly tool that streamlines workflow and improve productivity for both staff and service users. (To comply with my non-disclosure agreement, I omitted and obfuscated confidential information. All of the views and opinions in this post are my own and does not necessarily reflect those of Yokazu,Inc.)
 
+---
+
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -115,7 +117,7 @@ Cons:
 
 #### Case 2: Current Information Website Built With Google Sites
 
-Considering our limited resources, at first, I tried to figure out if I could improve the current website instead of building a new one. I explore the website, played with it and identified some key problems that would potentially post a danger to users' data and undermine workplace productivity.
+Considering our limited resources, at first, I tried to figure out if I could improve the current website instead of building a new one. I explored the website, played with it and identified some key problems that would potentially post dangers to users' data and undermine workplace productivity.
 
 - Due to the lack of a proper authentication functionality, all information was accessible by anyone and everyone.
 - Editing design and content took more time than expected.
