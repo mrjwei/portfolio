@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import useTranslation from 'next-translate/useTranslation'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -8,6 +9,8 @@ import {
 type WidthType = number | null
 
 export const FirstView = () => {
+  const {t} = useTranslation("top")
+
   const [width, setWidth] = useState(null as WidthType)
 
   const handleLoad = () => {
@@ -32,15 +35,15 @@ export const FirstView = () => {
       <div className="container h-full md:grid md:grid-cols-2 md:grid-rows-1">
         <div className="mb-16 md:mb-0 md:mr-14 md:flex md:flex-col md:justify-start lg:translate-y-10">
           <h1 className='text-white mb-12'>
-            Hi! I&apos;m Jesse Wei.<br />
-            I Create Beautiful & User-Friendly Web Services That Help Business Grow.
+            {t("title.part1")}<br />
+            {t("title.part2")}
           </h1>
           <div className='md:flex'>
             <Link href="/contact">
-              <a className='flex justify-center items-center button button-bg-white mb-8 md:mb-0 md:max-w-[12rem] md:mr-12'><span className='mr-3'>Contact Me</span> <BsArrowRight /></a>
+              <a className='flex justify-center items-center button button-bg-white mb-8 md:mb-0 md:max-w-[12rem] md:mr-12'><span className='mr-3'>{t("contactButton")}</span> <BsArrowRight /></a>
             </Link>
             <Link href="/works">
-              <a className='flex justify-center items-center button button-white md:max-w-[12rem]'><span className='mr-3'>See Works</span> <BsArrowRight /></a>
+              <a className='flex justify-center items-center button button-white md:max-w-[12rem]'><span className='mr-3'>{t("seeWorksButton")}</span> <BsArrowRight /></a>
             </Link>
           </div>
         </div>
