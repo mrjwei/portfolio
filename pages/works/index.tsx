@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Head from 'next/head'
 import {useRouter} from 'next/router'
 import {GetStaticProps} from 'next'
+import useTranslation from 'next-translate/useTranslation'
 import {WorkDataType} from '../../types';
 import {getEntriesData} from '../../lib/entries'
 import {getNumOfPages} from '../../lib/utils'
@@ -29,6 +30,8 @@ const ITEMPERPAGE = 6
 
 const Works =  ({worksData}: Props) => {
   const router = useRouter()
+
+  const {t} = useTranslation("works")
 
   const initialNumOfPages = getNumOfPages(worksData.length, ITEMPERPAGE)
 
@@ -169,7 +172,7 @@ const Works =  ({worksData}: Props) => {
       <Header mode="light" />
       <Main className='bg-mute py-36'>
         <div className='container'>
-          <h2 className='mb-8'>Works.</h2>
+          <h2 className='mb-8'>{t("title")}</h2>
           <div className='flex justify-start'>
             {filters.map((filter, index) => {
               const {label, value} = filter

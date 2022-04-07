@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import useTranslation from 'next-translate/useTranslation'
 
 type PaginationProps = {
   numOfPages: number
@@ -21,7 +22,6 @@ export const Pagination = ({
   handleMoveNext,
   handleMoveToPage
 }: PaginationProps) => {
-
   const PageNums = ({numOfPages, currentPage, handleClick}: PageNumsProps) => {
     const NumComponents = []
     for (let i = 0; i < numOfPages; i++) {
@@ -40,6 +40,9 @@ export const Pagination = ({
       </div>
     )
   }
+
+  const {t} = useTranslation("common")
+
   return (
     <div className="flex justify-center">
       <button
@@ -47,7 +50,7 @@ export const Pagination = ({
           disabled={currentPage === 1}
           onClick={handleMovePrev}
         >
-          Prev
+          {t("pagination.prevButton")}
       </button>
       <PageNums
         numOfPages={numOfPages}
@@ -59,7 +62,7 @@ export const Pagination = ({
           disabled={currentPage === numOfPages}
           onClick={handleMoveNext}
         >
-          Next
+          {t("pagination.nextButton")}
         </button>
     </div>
   )

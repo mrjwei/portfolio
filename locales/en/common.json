@@ -4,5 +4,9 @@
     "works": "Works",
     "posts": "Posts",
     "contact": "Contact"
+  },
+  "pagination": {
+    "prevButton": "Prev",
+    "nextButton": "Next"
   }
 }

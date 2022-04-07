@@ -4,5 +4,9 @@
     "works": "作品",
     "posts": "ブログ",
     "contact": "お問い合わせ"
+  },
+  "pagination": {
+    "prevButton": "前へ",
+    "nextButton": "次へ"
   }
 }
