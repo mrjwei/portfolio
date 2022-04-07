@@ -49,17 +49,19 @@ export const Header = ({mode}: Props) => {
             </a>
           </Link>
         </div>
-        <button
-          className={`text-2xl lg:hidden ${mode === "primary" ? "text-white" : "text-red-300"}`}
-          onClick={() => setIsOpen(true)}
-        >
+        <div className="flex justify-end">
+          <button
+            className={`ml-6 text-2xl order-last lg:hidden ${mode === "primary" ? "text-white" : "text-red-300"}`}
+            onClick={() => setIsOpen(true)}
+          >
             <FaBars />
-        </button>
-        <MobileNav
-          isOpen={isOpen}
-          handleClose={handleClose}
-        />
-        <PCNav mode={mode} />
+          </button>
+          <MobileNav
+            isOpen={isOpen}
+            handleClose={handleClose}
+          />
+          <PCNav mode={mode} />
+        </div>
       </div>
     </header>
   )
