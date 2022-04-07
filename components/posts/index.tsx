@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image';
 import {PostDataType} from '../../types'
-import {Title} from '../sectionTitle';
+import useTranslation from 'next-translate/useTranslation'
+import {Title} from '../sectionTitle'
 import {Card} from '../card'
 
 type Props = {
@@ -9,22 +10,24 @@ type Props = {
 }
 
 export const Posts = ({postsData}: Props) => {
+  const {t} = useTranslation("top")
+
   return (
     <div className="w-full bg-mute py-20 lg:py-0 lg:pt-36">
       <div className="container">
         <div className='lg:flex lg:justify-between lg:items-end mb-20'>
           <Title
-            label="My Posts"
+            label={t("posts.title.main")}
             reverse={false}
             className="mb-20 lg:mb-0"
           >
-            <span className="inline-block relative z-10 after:underbar">I Write About Design,</span><br/>
-            <span className='inline-block relative z-10 after:underbar'>Programming and</span><br/>
-            <span className='inline-block relative z-10 after:underbar'>Technologies.</span>
+            <span className="inline-block relative z-10 after:underbar">{t("posts.title.description.1")}</span><br/>
+            <span className='inline-block relative z-10 after:underbar'>{t("posts.title.description.2")}</span><br/>
+            <span className='inline-block relative z-10 after:underbar'>{t("posts.title.description.3")}</span>
           </Title>
           <Link href="/posts">
             <a className='text-red-300 flex items-center'>
-              <span className='mr-5'>More Posts</span>
+              <span className='mr-5'>{t("posts.button")}</span>
               <div  className='w-24 relative'>
                 <Image className='w-24' src="/images/global-images/more.svg" alt="more button" width={137} height={95} layout='responsive' />
               </div>

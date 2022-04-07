@@ -4,5 +4,87 @@
     "part2": "I Create Beautiful & User-Friendly Web Services That Help Business Grow."
   },
   "contactButton": "Contact Me",
-  "seeWorksButton": "See Works"
+  "seeWorksButton": "See Works",
+  "expertise": {
+    "title": {
+      "main": "My Expertise",
+      "description": "What I Do."
+    },
+    "content": {
+      "design": {
+        "title": "Design",
+        "items": {
+          "1": "UI/UX design",
+          "2": "Graphic design",
+          "3": "Product design"
+        }
+      },
+      "development": {
+        "title": "Development",
+        "items": {
+          "1": "Frontend",
+          "2": "Backend",
+          "3": "Deployment"
+        }
+      },
+      "language": {
+        "title": "Language Service",
+        "items": {
+          "1": "UI/UX design",
+          "2": "Translation",
+          "3": "Site localization"
+        }
+      }
+    }
+  },
+  "works": {
+    "title": {
+      "main": "My Works",
+      "description": {
+        "1": "Websites.",
+        "2": "Web Apps.",
+        "3": "Graphic Works.",
+        "4": "And Many More."
+      }
+    },
+    "button": "More Works"
+  },
+  "posts": {
+    "title": {
+      "main": "My Posts",
+      "description": {
+        "1": "I Write About Design,",
+        "2": "Programming and",
+        "3": "Technologies."
+      }
+    },
+    "button": "More Posts"
+  },
+  "about": {
+    "title": {
+      "main": "About Me",
+      "description": {
+        "1": "I Am a Trilingual",
+        "2": "Designer and",
+        "3": "Developer."
+      }
+    },
+    "content": {
+      "1": "My name is Jesse Wei. I am a trilingual (Chinese, English and Japanese) designer and developer currently based in Japan.",
+      "2": "Trained as a product designer, I started learning programming 8 years ago. Being able to design AND develop helps me contextualize a project by seeing it from the views of users, designers, designers and other stakeholders. This way, I can ensure a solution to be both user-friendly and technically manageable.",
+      "3": "I usually illustrate or brew coffee to treat my friends on my day off. These days, I'm busy practising latte art. I am also fan of LiverpoolFC and the Premier League."
+    }
+  },
+  "contact": {
+    "title": {
+      "main": "Get in Touch",
+      "description": {
+        "1": "Wanna Hire Me?",
+        "2": "Got a Question?",
+        "3": "Feel Free to Get in Touch!"
+      }
+    },
+    "button": "Contact Form",
+    "text": "Or via email:"
+  }
 }
