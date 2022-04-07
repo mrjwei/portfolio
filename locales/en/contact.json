@@ -1,1 +1,22 @@
-{}
+{
+  "title": {
+    "main": "Contact.",
+    "description": "<0>Whether you're interested in hiring me</0><1>or you've got a question to ask,</1><2>feel free to get in touch!</2>"
+  },
+  "form": {
+    "companyName": "Company Name (optional)",
+    "name": "Name",
+    "email": "Email Address",
+    "subject": {
+      "label": "Subject",
+      "options": {
+        "1": "Choose a subject",
+        "2": "Interested in hiring Jesse",
+        "3": "Question about works/posts",
+        "4": "Other"
+      }
+    },
+    "message": "Message"
+  },
+  "button": "Submit"
+}

@@ -2,6 +2,8 @@ import {useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
+import useTranslation from 'next-translate/useTranslation'
+import Trans from 'next-translate/Trans'
 import { useForm, ValidationError } from '@formspree/react'
 import {Button} from '../button'
 
@@ -11,6 +13,8 @@ type Props = {
 }
 
 export const Form = ({mode, withBorder}: Props) => {
+  const {t} = useTranslation("contact")
+
   const router = useRouter()
 
   const [state, handleSubmit] = useForm("mpzbdvpa")
@@ -38,18 +42,24 @@ export const Form = ({mode, withBorder}: Props) => {
     <div className={`container ${router.asPath === "/contact" && "container lg:grid lg:grid-cols-2"}`}>
       {router.asPath === "/contact" && (
         <div>
-          <h2 className='mb-8'>Contact.</h2>
+          <h2 className='mb-8'>{t("title.main")}</h2>
+          <Trans
+              i18nKey="contact:title.description"
+              components={[
+                <p key={0} className="text-xl mb-14 lg:mb-0" />,
+                <p key={1} className="text-xl mb-14 lg:mb-0" />,
+                <p key={2} className="text-xl mb-14 lg:mb-0" />,
+              ]}
+            />
           <p className='text-xl mb-14 lg:mb-0'>
-            Whether you&apos;re interested in hiring me<br/>
-            or you&apos;ve got a question to ask,<br/>
-            feel free to get in touch!
+
           </p>
         </div>
       )}
       <form className="block w-full" onSubmit={handleSubmit}>
         <input type="hidden" name="Contact Form" value="contact-form" />
         <div className="mb-6">
-          <label htmlFor="company-name" className={`block mb-3 ${mode === "primary" && "text-white"}`}>Company Name (optional)</label>
+          <label htmlFor="company-name" className={`block mb-3 ${mode === "primary" && "text-white"}`}>{t("form.companyName")}</label>
           <input type="text" name="company-name" id="company-name" className={`block w-full rounded-md ${withBorder ? "border-2" : "border-none"} `} />
           <ValidationError
             prefix="CompanyName"
@@ -58,7 +68,7 @@ export const Form = ({mode, withBorder}: Props) => {
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="name" className={`block mb-3 ${mode === "primary" && "text-white"}`}>Name</label>
+          <label htmlFor="name" className={`block mb-3 ${mode === "primary" && "text-white"}`}>{t("form.name")}</label>
           <input type="text" name="name" id="name" className={`block w-full rounded-md ${withBorder ? "border-2" : "border-none"} `} />
           <ValidationError
             prefix="Name"
@@ -67,7 +77,7 @@ export const Form = ({mode, withBorder}: Props) => {
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="email" className={`block mb-3 ${mode === "primary" && "text-white"}`}>Email Address</label>
+          <label htmlFor="email" className={`block mb-3 ${mode === "primary" && "text-white"}`}>{t("form.email")}</label>
           <input type="email" name="email" id="email" className={`block w-full rounded-md ${withBorder ? "border-2" : "border-none"} `} />
           <ValidationError
             prefix="Email"
@@ -76,12 +86,12 @@ export const Form = ({mode, withBorder}: Props) => {
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="subject" className={`block mb-3 ${mode === "primary" && "text-white"}`}>Subject</label>
+          <label htmlFor="subject" className={`block mb-3 ${mode === "primary" && "text-white"}`}>{t("form.subject.label")}</label>
           <select name="subject" id="subject" className={`block w-full rounded-md ${withBorder ? "border-2" : "border-none"} `}>
-            <option selected disabled>Choose a subject</option>
-            <option value="interested in hiring jesse">Interested in hiring Jesse</option>
-            <option value="question about a work/post">Got a question about a work/post</option>
-            <option value="other">Other</option>
+            <option selected disabled>{t("form.subject.options.1")}</option>
+            <option value="interested in hiring jesse">{t("form.subject.options.2")}</option>
+            <option value="question about a work/post">{t("form.subject.options.3")}</option>
+            <option value="other">{t("form.subject.options.4")}</option>
           </select>
           <ValidationError
             prefix="Subject"
@@ -90,7 +100,7 @@ export const Form = ({mode, withBorder}: Props) => {
           />
         </div>
         <div className="mb-12">
-          <label htmlFor="message" className={`block mb-3 ${mode === "primary" && "text-white"}`}>Message</label>
+          <label htmlFor="message" className={`block mb-3 ${mode === "primary" && "text-white"}`}>{t("form.message")}</label>
           <textarea name="message" id="message" rows={5} maxLength={500} className={`block w-full rounded-md ${withBorder ? "border-2" : "border-none"} `}></textarea>
           <ValidationError
             prefix="Message"
@@ -98,7 +108,7 @@ export const Form = ({mode, withBorder}: Props) => {
             errors={state.errors}
           />
         </div>
-        <button type="submit" className={`button ${mode === "primary" ? "button-white" : "button-bg-primary"}`} disabled={state.submitting}>Submit</button>
+        <button type="submit" className={`button ${mode === "primary" ? "button-white" : "button-bg-primary"}`} disabled={state.submitting}>{t("button")}</button>
       </form>
     </div>
   )
