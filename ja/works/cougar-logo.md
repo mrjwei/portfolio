@@ -8,9 +8,11 @@ date: "2020-10-20"
 
 ![completed cafeleo logo design](/images/work-images/cougar.png)
 
-This is a logo designed for CougaraFC, a conceptual Premier League team.
+CougarFCという仮想のプレミアリーグ球団のコンセプトロゴデザインです。
 ___
 
-## Concept
+## コンセプト
 
-I want the new PL team to be tough and move swiftly, which is why I chose the image of a cougar, an animal that is characterized by its strength and swiftness.
+くーがーは、ピューマ属の食肉類動物です。パワフルで敏捷なこの動物は、プレイヤーの力と速度が特に求められるプレミアリーグ球団のイメージに合っています。そのため、吠えているクーガーをモチーフに、大きくてスポーティな文字を添えた大胆なデザインにしました。
+
+また、全体のバランスをとるために、盾型の枠で図形を囲みました。青系の配色で、冷静さや信頼性をアピールしています。
