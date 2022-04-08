@@ -48,7 +48,8 @@ const Work =  ({work, allWorksData, allWorkIds}: Props) => {
 export default Work
 
 export const getStaticPaths = async () => {
-  const paths = getEntryIds("works")
+  const paths = getEntryIds("en/works")
+  paths.push(...getEntryIds("ja/works"))
   return {
     paths,
     fallback: false
@@ -57,8 +58,8 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context: any) => {
   const work = await getContentAndData(`${context.locale}/works`, context.params.id)
-  const allWorksData = getEntriesData("works")
-  const allWorkIds = getEntryIds("works").map(object => object.params.id)
+  const allWorksData = getEntriesData(`${context.locale}/works`)
+  const allWorkIds = getEntryIds(`${context.locale}/works`).map(object => object.params.id)
 
   return {
     props: {

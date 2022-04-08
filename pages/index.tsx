@@ -86,9 +86,9 @@ const Home = ({worksData, postsData}: any) => {
 
 export default Home
 
-export const getStaticProps: GetStaticProps = async () => {
-  const worksData = getEntriesData("works")
-  const postsData = getEntriesData("posts")
+export const getStaticProps: GetStaticProps = async (context: any) => {
+  const worksData = getEntriesData(`${context.locale}/works`)
+  const postsData = getEntriesData(`${context.locale}/posts`)
   return {
     props: {
       worksData,
