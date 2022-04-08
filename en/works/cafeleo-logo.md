@@ -8,9 +8,11 @@ date: "2020-12-15"
 
 ![completed cafeleo logo design](/images/work-images/cafeleo.png)
 
-This is a logo designed for CougaraFC, a conceptual Premier League team.
+This is a logo designed for Cafe Leo, a conceptual cafe.
 ___
 
 ## Concept
 
-I want the new PL team to be tough and move swiftly, which is why I chose the image of a cougar, an animal that is characterized by its strength and swiftness.
+I love vetor graphics and at one time, I was obssessed with animal logo designs. This logo was created based on the image of a lion and has a symmetric shape which helps strike a visual balance.
+
+Inspired by organic and delicate medieval designs often seen in European countries like the UK, I carefully chose the color scheme and added some small decorations to the overall modern and simple design, to reflect the characteristics of classic designs.
