@@ -5,7 +5,9 @@ module.exports = {
     "*": ["common"],
     "/": ["top"],
     "/works": ["works"],
+    "/works/*": ["work"],
+    "/posts/*": ["post"],
     "/posts": ["posts"],
-    "/contact": ["contact"],
+    "/contact": ["contact"]
   }
 }

@@ -235,8 +235,8 @@ const Posts =  ({postsData}: Props) => {
 
 export default Posts
 
-export const getStaticProps: GetStaticProps = async () => {
-  const postsData = getEntriesData("posts")
+export const getStaticProps: GetStaticProps = async (context: any) => {
+  const postsData = getEntriesData(`${context.locale}/posts`)
   return {
     props: {
       postsData

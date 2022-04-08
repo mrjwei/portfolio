@@ -8,5 +8,15 @@
   "pagination": {
     "prevButton": "前へ",
     "nextButton": "次へ"
-  }
+  },
+  "workNavigation": {
+    "prevButton": "前の作品",
+    "nextButton": "次の作品"
+  },
+  "backToWorksButton": "一覧へ戻る",
+  "postNavigation": {
+    "prevButton": "前の記事",
+    "nextButton": "次の記事"
+  },
+  "backToPostsButton": "一覧へ戻る"
 }

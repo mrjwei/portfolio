@@ -44,13 +44,16 @@ export const getEntryIds = (dirName: string) => {
   const fileDir = path.join(process.cwd(), dirName)
   const fileNames = fs.readdirSync(fileDir)
 
-  return fileNames.map(fileName => {
+  let pathArr = fileNames.map(fileName => {
     return {
       params: {
-        id: fileName.replace(/\.md$/, '')
+        id: fileName.replace(/\.md$/, ''),
+        locale: "ja"
       }
     }
   })
+  pathArr.push(...pathArr.map(p => ({...p, locale: "en"})))
+  return pathArr
 }
 
 export const getContentAndData = async (dirName: string, id: string) => {

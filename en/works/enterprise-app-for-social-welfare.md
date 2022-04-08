@@ -46,7 +46,7 @@ According to [National Institute of Population and Social Security Research (201
 A key scheme that supports the aged and the less-abled was the social welfare network. *National Institute of Population and Social Security Research* indicated that long-term care providers always suffer shortages of long-term care human resources as the demand for services increases. [東京商工リサーチ (2019)](https://www.ipss.go.jp/s-info/e/pssj/pssj2019.pdf) revealed that over 100 social welfare service providers went bankrupt or closed business in 2019 and one of the major reasons for this is **the universal shortage of workforce** in the industry.
 
 ![graphs of social welfare facilities going bankruptcy](/images/work-images/omnibiz-social-welfare-facilities-graph.png)
-*東京商工リサーチ https://www.tsr-net.co.jp/news/analysis/20200130_02.html*
+*東京商工リサーチ <https://www.tsr-net.co.jp/news/analysis/20200130_02.html>*
 
 The implication is that **a fundamental revolution of the existing operation model of social welfare companies** is not just necessary but inevitable.
 

@@ -8,5 +8,15 @@
   "pagination": {
     "prevButton": "Prev",
     "nextButton": "Next"
-  }
+  },
+  "workNavigation": {
+    "prevButton": "Prev Work",
+    "nextButton": "Next Work"
+  },
+  "backToWorksButton": "Back to Works",
+  "postNavigation": {
+    "prevButton": "Prev Post",
+    "nextButton": "Next Post"
+  },
+  "backToPostsButton": "Back to Posts"
 }

@@ -55,8 +55,8 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async ({params}: {params: {id: string}}) => {
-  const post = await getContentAndData("posts", params.id)
+export const getStaticProps = async (context: any) => {
+  const post = await getContentAndData(`${context.locale}/posts`, context.params.id)
   const allPostsData = getEntriesData("posts")
   const allPostIds = getEntryIds("posts").map(entry => entry.params.id)
   return {

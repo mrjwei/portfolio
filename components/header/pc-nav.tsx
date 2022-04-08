@@ -1,8 +1,6 @@
-import {useState} from 'react'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
-import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
 
 type Props = {
   mode: string
@@ -18,9 +16,10 @@ const langMap: LangMapInterface = {
 }
 
 export const PCNav = ({mode}: Props) => {
-  const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false)
+  const {pathname, query} = useRouter()
 
-  const {pathname} = useRouter()
+  console.log(query);
+
 
   const {t, lang} = useTranslation("common")
 
@@ -54,14 +53,26 @@ export const PCNav = ({mode}: Props) => {
         <button
           className={`mr-3 ${lang === "ja" ? "relative after:content-[''] after:block after:w-[5px] after:h-[5px] after:bg-red-300 after:rounded-full after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2" : "opacity-60"}`}
         >
-          <Link href={pathname} locale="ja">
+          <Link
+            href={{
+              pathname,
+              query
+            }}
+            locale="ja"
+          >
             日本語
           </Link>
         </button>
         <button
           className={`mr-3 ${lang === "en" ? "relative after:content-[''] after:block after:w-[5px] after:h-[5px] after:bg-red-300 after:rounded-full after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2" : "opacity-60"}`}
         >
-          <Link href={pathname} locale="en">
+          <Link
+            href={{
+              pathname,
+              query
+            }}
+            locale="en"
+          >
             EN
           </Link>
         </button>
