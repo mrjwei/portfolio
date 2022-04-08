@@ -18,9 +18,6 @@ const langMap: LangMapInterface = {
 export const PCNav = ({mode}: Props) => {
   const {pathname, query} = useRouter()
 
-  console.log(query);
-
-
   const {t, lang} = useTranslation("common")
 
   return (
