@@ -8,7 +8,7 @@ date: "2022-03-14"
 
 ![image of omnibiz app design](/images/work-images/omnibiz.png)
 
-Omnibiz is an [Enterprise Application (EA)](https://en.wikipedia.org/wiki/Enterprise_software) designed specifically for companies in the **social welfare industry**. We expect this app to play a significant role in **accelerating digital transformation** in the targeted companies and **trigger workplace revolution** across other industries in the future.
+Omnibiz is an [Enterprise Application (EA)](https://en.wikipedia.org/wiki/Enterprise_software) designed specifically for companies in the **social welfare industry**. We want to accelerate digital transformation in the social welfare domain with this app.
 
 *Note: To comply with my non-disclosure agreement, I omitted and obfuscated confidential information and Omnibizis a fictitious name that is made for description purpose. All of the views and opinions in this post are my own and does not necessarily reflect those of Yokazu,Inc.*
 
@@ -16,28 +16,32 @@ Omnibiz is an [Enterprise Application (EA)](https://en.wikipedia.org/wiki/Enterp
 
 - [Table of Contents](#table-of-contents)
 - [My Roles](#my-roles)
-- [Aging Population & Inadequate Workforce](#aging-population--inadequate-workforce)
+- [An Aging Population & Inadequate Workforce](#an-aging-population--inadequate-workforce)
 - [The Pandemic: Crisis and Opportunity](#the-pandemic-crisis-and-opportunity)
-- [The Available Options](#the-available-options)
+  - [Where Users Were Training Now](#where-users-were-training-now)
+  - [New Challenges](#new-challenges)
+  - [How The Challeges Were Handled](#how-the-challeges-were-handled)
+- [The Goal](#the-goal)
+- [Case Studies](#case-studies)
   - [Case 1: Kintone](#case-1-kintone)
   - [Case 2: Knowbe](#case-2-knowbe)
-- [The Goal: Building an App From The Ground up](#the-goal-building-an-app-from-the-ground-up)
+- [Building an App From The Ground up](#building-an-app-from-the-ground-up)
 - [The Challenges](#the-challenges)
   - [Defining the Scope](#defining-the-scope)
   - [Planning Release Phases](#planning-release-phases)
   - [Getting Everybody on the Same Page](#getting-everybody-on-the-same-page)
-- [Work in Progress](#work-in-progress)
+- [Design & Prototyping](#design--prototyping)
 
 ---
 
 ## My Roles
 
-- **Project leader**. I initiated the project and led the research, design and development of the app from Sep 2020 to Jun 2021.
+- **Designer & developer**. I initiated the project and led the research, design and development of the app from Sep 2020 to Jun 2021.
 - **Project manager**. We outsourced the engineering tasks in Jun 2021 and I took the PM position and have led the coordinating team within Yokazu, Inc. and the collaborating engineering team since then.
 
 ---
 
-## Aging Population & Inadequate Workforce
+## An Aging Population & Inadequate Workforce
 
 > ...one of the major reasons for the closing of social welfare facilities is **the universal shortage of workforce** in the industry.
 
@@ -48,29 +52,70 @@ A key scheme that supports the aged and the less-abled was the social welfare ne
 ![graphs of social welfare facilities going bankruptcy](/images/work-images/omnibiz-social-welfare-facilities-graph.png)
 *東京商工リサーチ <https://www.tsr-net.co.jp/news/analysis/20200130_02.html>*
 
-The implication is that **a fundamental revolution of the existing operation model of social welfare companies** is not just necessary but inevitable.
+It is expected to see even severe shortage of workers in the near future. This poses a major challenge that we must come up with ways to provide services of the same or higher quality with fewer service providers. One of the potential solutions would be workflow optimization by technologies.
 
 ---
 
 ## The Pandemic: Crisis and Opportunity
 
-> Service users now had to train at home and how could we possibly manage everything considering we did not even have an established workflow to do the managing?
+> Service users now had to train at home but we did not have an established approach to handling the new situation.
 
-Having worked in the industry for 3 years, I experienced the problems myself and had made great effort to alleviate the situation by developing multiple task automation programs for internal use.
+Having worked in the industry for 3 years, I experienced some of the common problems, such as inefficient workflow, which many facilities share. I made great effort to alleviate the situation by developing multiple task automation programs for our facility (see [Automating Google Sheets tasks](/works/sheets-master) and [Automating Kintone tasks](/works/kintone-master)).
 
-But the paper-based management did not change and important documents were still stored in an unorganized manner on multiple storage services.
+But the paper-based management did not change and digitized documents were still stored in an unorganized manner on multiple storage services such as Google Drive and Dropbox.
 
-In 2020, **the covid-19 pandemic** hit many social welfare facilities hard and we were no exception. Service users now had to train at home and how could we possibly manage everything considering we did not even have an established workflow to do the managing?
+In 2020, **the covid-19 pandemic** hit many social welfare facilities hard and we were no exception. Service users now had to train at home but we did not have an established approach to handling the new situation.
 
 ![storyboard: 1](/images/work-images/omnibiz-social-welfare-facilities-storyboard-1.png)
+*Left: users used to train at our facility and we used to keep their records on paper before the pandemic*
+*Right: users now had to train at home and paperwork had to be done differently amid the pandemic*
 
-It was crucial to realize that not just us, but many other facilities were in a similar quandary. The crisis actually presented us with an opportunity to reflect on the problems at an industry level and create solutions to solve them.
+To understand the scale of the impact the pandemic had on social welfare facilities and specific problems they were facing, I conducted user research across 12 facilities.
+
+The main pieces of information I wanted to collect included,
+
+- Where users were training now (at home vs. at facility).
+- New challenges due to the pandemic.
+- How each facility was handling the new challenges.
+
+### Where Users Were Training Now
+
+Among the 12 facilities, 9 had their users switch to training-from-home completely while the other 3 mixed training-from-home with training-at-facility.
+
+![training-from-home vs. training-at-facility](/images/work-images/omnibiz-social-welfare-facilities-research-1-en.png)
+
+### New Challenges
+
+I interviewed a total number of 28 facility employees from the 12 facilities about what new challenges the pandemic had posed to them. The result showed these main challenges,
+
+- Tracking users' training hours and training progresses was hard when they were training at home.
+- Traditional paperwork became difficult when users were not present at the facility.
+- Managing users who trained from home required additional documents specified by regulatory authorities, which increased staff's workload.
+
+![new challenges facing facilities](/images/work-images/omnibiz-social-welfare-facilities-research-2-en.png)
+
+### How The Challeges Were Handled
+
+Facilities improvised ways to handle the new challenges. These included,
+
+- Making use of Google Hangout, which requires zero orientation and is free of charge, to connect users with staff.
+- Having users report their training hours via Google Hangout or other chat tools.
+- Having users visit the facility once per month to complete the paperwork at one time.
+- Having users send their traning records via Google Hangout or other chat tools so that staff could transcribe the data on their behalf.
+
+All of these approaches require high level of human interference, which places increased burden on staff and compromises their productivity. In order for a solution, there needs to be a tool that integrates all of these tasks and data for efficient management.
 
 ---
 
-## The Available Options
+## The Goal
 
-So we wanted to develop a product that could help social welfare facilities become more productive. To avoid reinventing the wheel, I did extensive case studies on available tools and services that could potentially achieve the goal. Here are two of the studies.
+Base on what I found in my research, I set the goal of the project as creating an integrated groupware that helps with efficient user and data management and streamlined workflow (Note that we had not explored options, making use of existing apps or developing an original one, for the solution up until that point).
+
+---
+
+## Case Studies
+
+To achieve the goal, we had two options: making use of existing apps and developing a new one from ground up. As making use of existing apps is often the more cost-efficient way, I did a couple of case studies on available apps to see if we could avoid having to develop a new one from scratch.
 
 ### Case 1: Kintone
 
@@ -90,13 +135,10 @@ The features of kintone include:
 
 ![image of kintone: 3](/images/work-images/omnibiz-social-welfare-facilities-case-study-kintone-3.png)
 
-One of the downsides, however, is that as a general-purpose application, its targets are a bit *too general* and it struggles to meet specific needs in a certain industry. This left us with only one choice if we decided to go with kintone: extending it via its API.
+However, it comes with some downsides that led us to crossing it off.
 
-However, we dropped the option for three reasons.
-
-1. Workload of extending it would be heavy and potentially exceeding that of building one from scratch.
-2. We had legal concerns about selling the extended product.
-3. Selling an extended application with another brand would not help establishing our own brand.
+- Being general-purpose compromises its ability to meet nuanced needs in a particular industry.
+- Customizing it to adapt to those nuanced needs might be possible, but too costly and time-consuming to be justified as a viable approach.
 
 ### Case 2: Knowbe
 
@@ -114,13 +156,16 @@ However, we dropped the option for three reasons.
 
 ![image of knowbe: 3](/images/work-images/omnibiz-social-welfare-facilities-case-study-knowbe-3.png)
 
-However, the documents and data it handles are not exhaustive enough to make it truly useful for various types of social welfare facilities. It also has no support for managing facility- and employee-related data. And its zero customizability or extensibility means it's unlikely for us to sell an extended version.
+Unfortunately, it has some serious problems that make it an unpromising candidate.
+
+- It is not a fully integrated solution with some important documents not being handled. These documents would have to be processed manually or with extra tools, which is inconvinient and inefficient.
+- It has no customizability or extensibility.
 
 ---
 
-## The Goal: Building an App From The Ground up
+## Building an App From The Ground up
 
-My case studies indicated that available tools all had significant weaknesses that could not be overcome cost-efficiently. So we decided to build an app from the ground up. It should be **an all-in-one solution and users should be able to customize it to fit their individual needs**.
+My case studies indicated that available tools all had significant weaknesses that could not be overcome cost-efficiently. So it left us with no option but to build an app from the ground up.
 
 ![storyboard: 2](/images/work-images/omnibiz-social-welfare-facilities-storyboard-2.png)
 
@@ -128,15 +173,15 @@ My case studies indicated that available tools all had significant weaknesses th
 
 ## The Challenges
 
-From the very beginning of the development stage, we've been faced with some major challenges.
+We have been faced with multiple challenges since the start of the project and we have always tried to solve them as a team.
 
 ### Defining the Scope
 
-Creating an *all-in-one* solution does not mean without trade-off. We just cannot throw every functionality people want into the app. So our first challenge was to decide what should be included.
+One of the first questions we had to answer was "How far should we go?". Creating an *all-in-one* solution does not mean without trade-off. We just cannot throw every functionality people want into the app. So we had to decide what to include, what not to and what to do first.
 
-We managed to define a manageable scope by putting all of the features of the products I studied on paper, brainstorming other features, combining all of them to create a feature list and crossing all of the feature we decided not to include.
+We had a couple of brainstorming sessions and created a "wish list" where all features that team members could possibly come up with were included. We crossed off features that we would not implement and prioritized the rest.
 
-We defined the scope in a matter of just 2 days, understanding that it would change anyway as we progress. So leave it with a bit of flexibility and just move on.
+An important point here was we did not spend too much time trying to work out all of the details, becasue we understood that things would change as development started and we wanted a bit of flexibility.
 
 ### Planning Release Phases
 
@@ -151,13 +196,19 @@ Two *yeses* got a feature into phase 1 and otherwise phase 2.
 
 ### Getting Everybody on the Same Page
 
-The team initially consisted of a designer and developer (me), 3 staff members as supporters and our manager as PM. Then, in Jun 2021, 4 developers from a partner joined us and I assumed the PM position. All of us have different areas of expertise and different levels of knowledge of the social welfare industry. Above all, communicating the context of the project to the external developers turned out to be the biggest challenge.
+The team initially consisted of internal members only. Then, in Jun 2021, as we outsourced the development work, external developers joined us. All of us have very different areas of expertise and knowledge. As PM, who has experience in both software engineering and the social welfare industry, my job is to facilitate communication between members. My effort includes,
 
-In order to help everyone get onboard quickly,
+- I separated materials with information relevant to the project from those that was not. This way, I reduced noise and important information got communicated more efficiently.
+- Research have shown that visual medium facilitates more effective communication ([Dewan, P. (2015). Words Versus Pictures: Leveraging the Research on Visual Communication.](chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://journal.lib.uoguelph.ca/index.php/perj/article/download/3137/3473/0)). In the description of the bulletin board feature, for example, I made use of the wireframes I created and the bulletin board UI of Kintone to highlight some key concepts that we wanted to incorporate into the new app. Similar discussion took 30 minutes to 1 hour before, but this time, we got the message through in just 10 minutes.
 
-- I separated materials that contained information relevant to the project from those that did not. This way, I reduced noise and important information got communicated more efficiently.
-- Research have shown that visual medium facilitates more effective communication ([Dewan, P. (2015). Words Versus Pictures: Leveraging the Research on Visual Communication.](chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://journal.lib.uoguelph.ca/index.php/perj/article/download/3137/3473/0)). So I made full use of visual graphics at meetings and discussions. For example, I brought carefully created UI wireframes that communicated key features to the first meeting with the external developers. This helped them capture the big picture and they showed us the first prototype in just 4 weeks!
+---
 
-## Work in Progress
+## Design & Prototyping
 
-This app is currently on the protyping stage and I will update this post once there is new progress.
+The application is still under development. Here are some images showing the wireframes, UI design and first prototype.
+
+![wireframe sample 1](/images/work-images/omnibiz-wire-1.png)
+![wireframe sample 2](/images/work-images/omnibiz-wire-2.png)
+![ui sample 1](/images/work-images/omnibiz-ui-1.png)
+![ui sample 2](/images/work-images/omnibiz-ui-2.png)
+![first prototype sample](/images/work-images/omnibiz-mockup.gif)
