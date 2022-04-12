@@ -43,12 +43,14 @@ export const getEntriesData = (dirName: string) => {
 export const getEntryIds = (dirName: string) => {
   const fileDir = path.join(process.cwd(), dirName)
   const fileNames = fs.readdirSync(fileDir)
+  const locale = dirName.split("/")[0]
 
   return fileNames.map(fileName => {
     return {
       params: {
         id: fileName.replace(/\.md$/, ''),
-      }
+      },
+      locale
     }
   })
 }
