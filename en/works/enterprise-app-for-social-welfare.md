@@ -10,7 +10,7 @@ date: "2022-03-14"
 
 Omnibiz is an [Enterprise Application (EA)](https://en.wikipedia.org/wiki/Enterprise_software) designed specifically for companies in the **social welfare industry**. We want to accelerate digital transformation in the social welfare domain with this app.
 
-*Note: To comply with my non-disclosure agreement, I omitted and obfuscated confidential information and Omnibizis a fictitious name that is made for description purpose. All of the views and opinions in this post are my own and does not necessarily reflect those of Yokazu,Inc.*
+*Note: To comply with my non-disclosure agreement, I omitted and obfuscated confidential information and Omnibiz is a fictitious name that is made for description purpose. All of the views and opinions in this post are my own and does not necessarily reflect those of Yokazu,Inc.*
 
 ## Table of Contents
 
