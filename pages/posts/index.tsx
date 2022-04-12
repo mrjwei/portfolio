@@ -40,8 +40,6 @@ const Posts =  ({postsData}: Props) => {
   const [numOfPages, setNumOfPages] = useState(initialNumOfPages)
   const [currentPage, setCurrentPage] = useState<number | null>(null)
 
-  console.log("currentPage: ", currentPage)
-
   useEffect(() => {
     if(router.isReady) {
       setCurrentPage(router.query.page ? Number(router.query.page) : 1)
