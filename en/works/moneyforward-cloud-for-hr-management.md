@@ -54,6 +54,7 @@ When I worked on the project, I was faced with a couple of challenges.
 
 #### Support for Storing Tax-related Data: What I Did
 
+- Defined requirements.
 - Designed tests.
 - Designed and coded components for tax payment.
 - Adjusted queries and mutations for the newly added fields.
