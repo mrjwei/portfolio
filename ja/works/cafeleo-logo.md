@@ -1,7 +1,7 @@
 ---
-title: "Cafe Leo：コンセプトロゴデザイン"
+title: "Cafe Leo：コンセプトロゴ"
 tags: ["#logo", "#design", "#concept"]
-description: "A logo designed for Cafe Leo, a conceptual vintage cafe."
+description: "Cafe Leoというコンセプトカフェのロゴデザインです。"
 image: "/images/work-images/cafeleo.png"
 date: "2020-12-15"
 ---

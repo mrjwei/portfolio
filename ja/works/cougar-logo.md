@@ -1,7 +1,7 @@
 ---
-title: "Logo Concept: CougarFC"
+title: "CougarFC：コンセプトロゴ"
 tags: ["#logo", "#design", "#concept"]
-description: "A logo designed for CougarFC, a conceptual PL team."
+description: "CougarFCという仮想のプレミアリーグ球団のコンセプトロゴデザインです。"
 image: "/images/work-images/cougar.png"
 date: "2020-10-20"
 ---
