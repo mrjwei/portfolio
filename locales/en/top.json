@@ -71,8 +71,9 @@
     },
     "content": {
       "1": "My name is Jesse Wei. I am a trilingual (Chinese, English and Japanese) designer and developer currently based in Japan.",
-      "2": "Trained as a product designer, I started learning programming 8 years ago. Being able to design AND develop helps me contextualize a project by seeing it from the views of users, designers, designers and other stakeholders. This way, I can ensure a solution to be both user-friendly and technically manageable.",
-      "3": "I usually illustrate or brew coffee to treat my friends on my day off. These days, I'm busy practising latte art. I am also fan of LiverpoolFC and the Premier League."
+      "2": "I have over 7 years of experience in multiple design areas with a focus on UI/UX design. I am also experienced in development, particularly frontend development. Being able to design AND develop helps me understand a project better and thus create a more usable and manageable solution.",
+      "3": "<0>I am currently in the middle of a</0> <1>30-day coding challenge</1> <2>and embarking on a couple of client works at the same time.</2>",
+      "4": "When I am not working, I would practice latte art or treat my friends with freshly brewed coffee. I have been fan of LiverpoolFC for over 10 years and I love watching Premier League matches."
     }
   },
   "contact": {

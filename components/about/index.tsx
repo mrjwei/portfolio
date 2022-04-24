@@ -1,4 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
+import Trans from 'next-translate/Trans'
 import {
   SiAdobexd,
   SiAdobeillustrator,
@@ -60,9 +61,17 @@ export const About = () => {
             <SiAmazonaws />
           </div>
           <div>
-            <p className='mb-8'>{t("about.content.1")}</p>
-            <p  className='mb-8'>{t("about.content.2")}</p>
-            <p>{t("about.content.3")}</p>
+            <p className='mb-6'>{t("about.content.1")}</p>
+            <p className='mb-6'>{t("about.content.2")}</p>
+            <Trans
+              i18nKey="top:about.content.3"
+              components={[
+                <span key={0} />,
+                <a key={1} className="text-red-300 underline" href="https://challenges.jessewei.jp/" target="_blank" rel="noreferrer" />,
+                <span key={2} />,
+              ]}
+            />
+            <p className="mt-6">{t("about.content.4")}</p>
           </div>
         </div>
       </div>
