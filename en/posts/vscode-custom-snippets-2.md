@@ -1,6 +1,6 @@
 ---
 title: "VSCode Custom Snippets: Powerful Yet Handy Tool For Boosted Productivity (Part2)"
-date: "2022-04-05"
+date: "2022-05-19"
 tags: ["#vscode", "#tips&tricks"]
 description: "Today, we will learn about *placeholder transform* and create a more sophisticated snippet using it."
 ---

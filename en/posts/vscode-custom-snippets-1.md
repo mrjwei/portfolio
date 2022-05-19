@@ -1,6 +1,6 @@
 ---
 title: "VSCode Custom Snippets: Powerful Yet Handy Tool For Boosted Productivity (Part1)"
-date: "2022-04-03"
+date: "2022-05-18"
 tags: ["#vscode", "#tips&tricks"]
 description: "VSCode is powerful but would not be so powerful without its custom snippets feature."
 ---
