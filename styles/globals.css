@@ -105,6 +105,9 @@
   .prose img + em + em {
     @apply block text-gray-400;
   }
+  img[src$="#hasCaption"] {
+    @apply mb-2;
+  }
   .prose > :where(:first-child):not(:where([class~="not-prose"] *)) + p + p {
     @apply text-gray-400;
   }
