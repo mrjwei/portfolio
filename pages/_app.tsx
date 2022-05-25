@@ -1,7 +1,13 @@
 import Script from 'next/script'
 import '../styles/globals.css'
 import 'highlight.js/styles/vs2015.css'
-import type { AppProps } from 'next/app'
+import type { AppProps, NextWebVitalsMetric } from 'next/app'
+
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  if (metric.label === 'web-vital') {
+    console.log(metric)
+  }
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
